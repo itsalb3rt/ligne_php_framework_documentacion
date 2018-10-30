@@ -25,4 +25,14 @@ function includeHTML() {
         }
     }
 };
+function openNav() {
+    document.getElementById("tabla_contenido_lateral").style.marginLeft = "0rem";
+    document.getElementById("tabla_contenido_lateral").style.height = "auto";
+    document.getElementById("openbutton").style.color = "white";
+}
 
+function closeNav() {
+    document.getElementById("tabla_contenido_lateral").style.marginLeft = "-11.5rem";
+    document.getElementById("tabla_contenido_lateral").style.height = "64px";
+    document.getElementById("openbutton").style.color = "black";
+}

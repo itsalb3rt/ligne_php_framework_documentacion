@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="508adfcb-675d-459f-8565-2cfc6c75eee5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/includes/tabla_contenido.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Configuracion.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Configuracion.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Constructor de formularios.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Constructor de formularios.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Introduccion.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Introduccion.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vista.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Vista.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controladores.htm" beforeDir="false" afterPath="$PROJECT_DIR$/controladores.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/convenciones.htm" beforeDir="false" afterPath="$PROJECT_DIR$/convenciones.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/creditos.html" beforeDir="false" afterPath="$PROJECT_DIR$/creditos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ligne.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ligne.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/pie_pagina.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/pie_pagina.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/includes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/includes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/modelo.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query_builder.htm" beforeDir="false" afterPath="$PROJECT_DIR$/query_builder.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/time_difference.htm" beforeDir="false" afterPath="$PROJECT_DIR$/time_difference.htm" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Introduccion.htm" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Introduccion.htm">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="55" column="64" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+            <state relative-caret-position="253">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -51,14 +67,20 @@
       <find>Las vistas pueden recibir un</find>
       <find>use</find>
       <find>function</find>
+      <find>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/ligne.min.css&quot;&gt;</find>
+      <find>container</find>
     </findStrings>
     <replaceStrings>
       <replace>body</replace>
       <replace>class=&quot;panel bordered</replace>
       <replace>&lt;header&gt;         &lt;div&gt;             &lt;ul id=&quot;breadcrumb&quot;&gt;                 &lt;li&gt;&lt;a href=&quot;Introduccion.htm&quot;&gt;&lt;span&gt; &lt;/span&gt; Inicio&lt;/a&gt;&lt;/li&gt;                 &lt;li&gt;&lt;a href=&quot;indice.html&quot;&gt;&lt;span&gt;Indice de contenido&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;                 &lt;li&gt;&lt;a href=&quot;creditos.html&quot;&gt;&lt;span&gt; &lt;/span&gt;Creditos&lt;/a&gt;&lt;/li&gt;             &lt;/ul&gt;         &lt;/div&gt;     &lt;/header&gt;</replace>
+      <replace>container-fluid</replace>
+      <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/ligne.min.css?v1.2&quot;&gt;</replace>
+      <replace />
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Usuario\Desktop\Ligne Framework</dir>
+      <dir>C:\wamp64\www\ligne_php_documentacion</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -70,23 +92,24 @@
         <option value="$PROJECT_DIR$/quer_builder.htm" />
         <option value="$PROJECT_DIR$/creditos.txt" />
         <option value="$PROJECT_DIR$/js/js.js" />
-        <option value="$PROJECT_DIR$/js/includes.js" />
         <option value="$PROJECT_DIR$/css/menu.css" />
-        <option value="$PROJECT_DIR$/Configuracion.htm" />
-        <option value="$PROJECT_DIR$/Assets.htm" />
-        <option value="$PROJECT_DIR$/Constructor de formularios.htm" />
-        <option value="$PROJECT_DIR$/creditos.html" />
         <option value="$PROJECT_DIR$/indice.html" />
+        <option value="$PROJECT_DIR$/Introduccion.htm" />
+        <option value="$PROJECT_DIR$/controladores.htm" />
+        <option value="$PROJECT_DIR$/Assets.htm" />
+        <option value="$PROJECT_DIR$/Configuracion.htm" />
+        <option value="$PROJECT_DIR$/Constructor de formularios.htm" />
+        <option value="$PROJECT_DIR$/convenciones.htm" />
+        <option value="$PROJECT_DIR$/creditos.html" />
+        <option value="$PROJECT_DIR$/modelo.htm" />
         <option value="$PROJECT_DIR$/query_builder.htm" />
         <option value="$PROJECT_DIR$/time_difference.htm" />
         <option value="$PROJECT_DIR$/includes/pie_pagina.html" />
-        <option value="$PROJECT_DIR$/convenciones.htm" />
-        <option value="$PROJECT_DIR$/modelo.htm" />
         <option value="$PROJECT_DIR$/css/ligne.min.css" />
-        <option value="$PROJECT_DIR$/Vista.htm" />
-        <option value="$PROJECT_DIR$/controladores.htm" />
+        <option value="$PROJECT_DIR$/js/includes.js" />
+        <option value="$PROJECT_DIR$/includes/tabla_contenido.html" />
         <option value="$PROJECT_DIR$/includes/menu.html" />
-        <option value="$PROJECT_DIR$/Introduccion.htm" />
+        <option value="$PROJECT_DIR$/Vista.htm" />
       </list>
     </option>
   </component>
@@ -108,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,12 +141,23 @@
             <path>
               <item name="ligne_php_documentacion" type="b2602c69:ProjectViewProjectNode" />
               <item name="ligne_php_documentacion" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ligne_php_documentacion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ligne_php_documentacion" type="462c0819:PsiDirectoryNode" />
               <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ligne_php_documentacion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ligne_php_documentacion" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,27 +198,30 @@
       <workItem from="1540503552661" duration="7293000" />
       <workItem from="1540555729284" duration="93000" />
       <workItem from="1540904866293" duration="4270000" />
-      <workItem from="1540910849568" duration="716000" />
+      <workItem from="1540910849568" duration="871000" />
+      <workItem from="1540913854592" duration="58000" />
+      <workItem from="1540914709774" duration="5184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39947000" />
+    <option name="totallyTimeSpent" value="45344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18573265" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19087404" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -194,7 +230,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -352,76 +387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/includes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="302" column="38" selection-start-line="302" selection-start-column="38" selection-end-line="302" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Configuracion.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="153" selection-start-line="153" selection-end-line="158" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Constructor de formularios.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="1009" column="38" selection-start-line="1009" selection-start-column="38" selection-end-line="1009" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="244" column="38" selection-start-line="244" selection-start-column="38" selection-end-line="244" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/query_builder.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="2417" column="38" selection-start-line="2417" selection-start-column="38" selection-end-line="2417" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/time_difference.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="412" column="38" selection-start-line="412" selection-start-column="38" selection-end-line="412" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/pie_pagina.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="87" selection-start-line="8" selection-start-column="87" selection-end-line="8" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/creditos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="58" column="72" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/convenciones.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="130" column="43" selection-start-line="130" selection-start-column="43" selection-end-line="130" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/menu.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="943">
@@ -429,48 +394,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/ligne.min.css">
+    <entry file="file://$PROJECT_DIR$/Assets.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="207">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuracion.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Constructor de formularios.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/convenciones.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/creditos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modelo.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="147" column="100" selection-start-line="147" selection-start-column="100" selection-end-line="147" selection-end-column="100" />
+        <state relative-caret-position="294">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vista.htm">
+    <entry file="file://$PROJECT_DIR$/time_difference.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="379" column="22" selection-start-line="379" selection-start-column="22" selection-end-line="379" selection-end-column="22" />
+        <state relative-caret-position="382">
+          <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/query_builder.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controladores.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="144" column="30" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#ul#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="276">
+          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Introduccion.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="55" column="64" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
+        <state relative-caret-position="483">
+          <caret line="55" column="64" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/pie_pagina.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/includes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/tabla_contenido.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#283#290#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ligne.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vista.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
         </state>
       </provider>
     </entry>
