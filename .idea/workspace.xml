@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="508adfcb-675d-459f-8565-2cfc6c75eee5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/tabla_contenido.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Assets.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Configuracion.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Configuracion.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constructor de formularios.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Constructor de formularios.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Introduccion.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Introduccion.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vista.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Vista.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladores.htm" beforeDir="false" afterPath="$PROJECT_DIR$/controladores.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convenciones.htm" beforeDir="false" afterPath="$PROJECT_DIR$/convenciones.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/creditos.html" beforeDir="false" afterPath="$PROJECT_DIR$/creditos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/ligne.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ligne.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/pie_pagina.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/pie_pagina.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/includes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/includes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modelo.htm" beforeDir="false" afterPath="$PROJECT_DIR$/modelo.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/query_builder.htm" beforeDir="false" afterPath="$PROJECT_DIR$/query_builder.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_difference.htm" beforeDir="false" afterPath="$PROJECT_DIR$/time_difference.htm" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
               <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modelo.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modelo.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Introduccion.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Introduccion.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -101,7 +102,6 @@
         <option value="$PROJECT_DIR$/Constructor de formularios.htm" />
         <option value="$PROJECT_DIR$/convenciones.htm" />
         <option value="$PROJECT_DIR$/creditos.html" />
-        <option value="$PROJECT_DIR$/modelo.htm" />
         <option value="$PROJECT_DIR$/query_builder.htm" />
         <option value="$PROJECT_DIR$/time_difference.htm" />
         <option value="$PROJECT_DIR$/includes/pie_pagina.html" />
@@ -110,6 +110,7 @@
         <option value="$PROJECT_DIR$/includes/tabla_contenido.html" />
         <option value="$PROJECT_DIR$/includes/menu.html" />
         <option value="$PROJECT_DIR$/Vista.htm" />
+        <option value="$PROJECT_DIR$/modelo.htm" />
       </list>
     </option>
   </component>
@@ -200,12 +201,12 @@
       <workItem from="1540904866293" duration="4270000" />
       <workItem from="1540910849568" duration="871000" />
       <workItem from="1540913854592" duration="58000" />
-      <workItem from="1540914709774" duration="5184000" />
+      <workItem from="1540914709774" duration="5426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45344000" />
+    <option name="totallyTimeSpent" value="45586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -429,13 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modelo.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/time_difference.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -454,13 +448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Introduccion.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="55" column="64" selection-start-line="55" selection-start-column="59" selection-end-line="55" selection-end-column="64" />
         </state>
       </provider>
     </entry>
@@ -514,6 +501,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Introduccion.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modelo.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>

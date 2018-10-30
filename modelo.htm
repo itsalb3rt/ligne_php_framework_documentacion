@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
     <meta name=Generator content="Microsoft Word 15 (filtered)">
     <link rel="stylesheet" href="css/ligne.min.css?v1.2">
@@ -55,12 +56,12 @@
                 <ol>
                     <li><a href="#como_funcionan_modelos" class="important undecoration primary">Como funcionan los modelos</a></li>
                     <li><a href="#recuperar_datps" class="important undecoration primary">Recuperar datos Pdox</a></li>
-                    <li><a href="#ejemplo_seleccion" class="important undecoration primary">Ejemplo de selección un único registro</a></li>
+                    <li><a href="#ejemplo_seleccion" class="important undecoration primary">Ejemplo de selecciÃ³n un Ãºnico registro</a></li>
                     <li><a href="#getall" class="important undecoration primary">GetAll()</a></li>
                     <li><a href="#insertando_datos" class="important undecoration primary">Insertando datos</a></li>
                     <li><a href="#actualizando_datos" class="important undecoration primary">Actualizando registros</a></li>
                     <li><a href="#eliminando_datos" class="important undecoration primary">Eliminar registros</a></li>
-                    <li><a href="#metodo_query" class="important undecoration primary">Consultas método Query</a></li>
+                    <li><a href="#metodo_query" class="important undecoration primary">Consultas mÃ©todo Query</a></li>
                     <li><a href="#resumen" class="important undecoration primary">Resumen</a></li>
                 </ol>
             </div>
@@ -72,7 +73,7 @@
                     <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Modelos</span></b></p>
 
                     <p class=MsoNormal>Los modelos son las clases que forman la capa empresarial en
-                        su aplicación. Deben ser responsables de administrar casi todo lo relacionado
+                        su aplicaciÃ³n. Deben ser responsables de administrar casi todo lo relacionado
                         con sus datos, su validez y sus interacciones.</p>
 
                     <p class=MsoNormal>Generalmente, las clases modelo representan datos y se usan
@@ -82,21 +83,21 @@
                     <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Como
 funcionan los modelos</span></b></p>
 
-                    <p class=MsoNormal>Un modelo representa su modelo de datos. En la programación
+                    <p class=MsoNormal>Un modelo representa su modelo de datos. En la programaciÃ³n
                         orientada a objetos, un modelo de datos es un objeto que representa una cosa
                         como una persona o una casa. Un blog, por ejemplo, puede tener muchas
-                        publicaciones y cada publicación del blog puede tener muchos comentarios. El
-                        Blog, Publicación y Comentario son todos ejemplos de modelos, cada uno asociado
+                        publicaciones y cada publicaciÃ³n del blog puede tener muchos comentarios. El
+                        Blog, PublicaciÃ³n y Comentario son todos ejemplos de modelos, cada uno asociado
                         con otro.</p>
 
-                    <p class=MsoNormal>Aquí hay un ejemplo simple de una definición de modelo en Ligne:</p>
+                    <p class=MsoNormal>AquÃ­ hay un ejemplo simple de una definiciÃ³n de modelo en Ligne:</p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#1080FF'>&nbsp;</span></p>
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#1080FF'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#1080FF'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#1080FF'>namespace </span><span lang=EN-US
                                                     style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'></span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>
@@ -109,22 +110,22 @@ color:#1080FF'>&nbsp;</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#1080FF'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#1080FF'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#1080FF'>class </span><span lang=EN-US
                                                     style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>Tasks </span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>extends
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#DEE3EC'>Model</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>{<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#1080FF'>public function </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#73C800'>index</span><span lang=EN-US
                                                                style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(){<br>
-        </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â Â Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#6E7A94'>//code<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#0F81FF'>}<br>
- }</span></p>
+Â }</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
@@ -132,19 +133,19 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 
                     <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-                    <p class=MsoNormal>Con solo esta simple declaración, el modelo <b>Tasks </b>está
+                    <p class=MsoNormal>Con solo esta simple declaraciÃ³n, el modelo <b>Tasks </b>estÃ¡
                         dotado de toda la funcionalidad que necesita para crear consultas y guardar y
-                        eliminar datos. Estos métodos provienen de la clase Modelo de Ligne por la
+                        eliminar datos. Estos mÃ©todos provienen de la clase Modelo de Ligne por la
                         magia de la herencia. Es esta clase <b>Model </b>central la que otorga la
                         funcionalidad a su modelo de <b>Tasks</b>.</p>
 
                     <p class=MsoNormal>Para poder trabajar con el modelo <b>Tasks</b>, se crea el
                         archivo PHP en el directorio <span style='background:silver'>/Models/Tasks/</span>.
-                        Por convención, debería tener el mismo nombre que la clase, que para este
-                        ejemplo será <span style='background:silver'>Tasks.php</span></p>
+                        Por convenciÃ³n, deberÃ­a tener el mismo nombre que la clase, que para este
+                        ejemplo serÃ¡ <span style='background:silver'>Tasks.php</span></p>
                     <p>
                         Esta clase debe contener un <span style='background:silver'>namespace</span> ya que este se utiliza para incluir el modelo en donde sea necesario su uso.
-                        El namespace no es más que el directorio con barras invertidas donde esta el modelo, por ejemplo, en nuestro caso el modelo está en el directorio <span style='background:silver'>/Models/Tasks/</span>.
+                        El namespace no es mÃ¡s que el directorio con barras invertidas donde esta el modelo, por ejemplo, en nuestro caso el modelo estÃ¡ en el directorio <span style='background:silver'>/Models/Tasks/</span>.
 
                     </p>
                 </div>
@@ -156,12 +157,12 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 datos Pdox</span></b></p>
 
                     <p class=MsoNormal>El generador de consultas Pdox proporciona una interfaz
-                        fluida fácil de usar para crear y ejecutar consultas. Al componer las consultas
+                        fluida fÃ¡cil de usar para crear y ejecutar consultas. Al componer las consultas
                         juntas, puede crear consultas avanzadas utilizando uniones y subconsultas con
                         facilidad.</p>
 
                     <p class=MsoNormal>Debajo de las capas, el generador de consultas utiliza
-                        declaraciones preparadas con PDO que protegen contra ataques de inyección SQL</p>
+                        declaraciones preparadas con PDO que protegen contra ataques de inyecciÃ³n SQL</p>
 
                     <p class=MsoNormal>&nbsp;</p>
                 </div>
@@ -170,9 +171,9 @@ datos Pdox</span></b></p>
             <div id="ejemplo_seleccion" class="panel bordered">
                 <div class="body">
                     <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Ejemplo
-de selección un único registro</span></b></p>
+de selecciÃ³n un Ãºnico registro</span></b></p>
 
-                    <p class=MsoNormal>Podemos obtener un registro con el método <span
+                    <p class=MsoNormal>Podemos obtener un registro con el mÃ©todo <span
                             style='background:silver'>get()</span> veamos un ejemplo de consulta por un
                         criterio en concreto;</p>
 
@@ -182,14 +183,14 @@ color:#1080FF'>&nbsp;</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#1080FF'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#1080FF'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#1080FF'>public function </span><span lang=EN-US
                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>showTask</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$id</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>)<br>
- {<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â {<br>
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#DEE3EC'>$req </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>= </span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$this</span><span
@@ -200,13 +201,13 @@ color:#DEE3EC'>$req </span><span lang=EN-US style='font-size:9.0pt;font-family:
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'tasks'</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>)<br>
-        -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â Â Â Â Â  -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#FF4427'>select</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#73C800'>'id, title, description,
 created_at,updated_at,success'</span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>)<br>
-        -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â Â Â Â Â  -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#FF4427'>where</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#73C800'>'id'</span><span lang=EN-US
@@ -215,25 +216,25 @@ color:#FF4427'>where</span><span lang=EN-US style='font-size:9.0pt;font-family:
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$id</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>)<br>
-        -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â Â Â Â Â  -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#FF4427'>get</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>();<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#1080FF'>return </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#DEE3EC'>$req</span><span lang=EN-US
                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>;<br>
- }</span></p>
+Â }</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
 
-                    <p class=MsoNormal><span lang=EN-US> </span></p>
+                    <p class=MsoNormal><span lang=EN-US>Â </span></p>
 
-                    <p class=MsoNormal>La sintaxis es sumamente sencilla, tenemos un método <span
-                            style='background:silver'>getBdd()</span> el cual nos proporciona una conexión
-                        nueva a la base de datos, luego de esto es aquí donde entra la magia de Pdox <i>(Query
-                            Builder) </i>el mismo nos proporciona una serie de métodos que nos facilitaran
+                    <p class=MsoNormal>La sintaxis es sumamente sencilla, tenemos un mÃ©todo <span
+                            style='background:silver'>getBdd()</span> el cual nos proporciona una conexiÃ³n
+                        nueva a la base de datos, luego de esto es aquÃ­ donde entra la magia de Pdox <i>(Query
+                            Builder) </i>el mismo nos proporciona una serie de mÃ©todos que nos facilitaran
                         la vida;</p>
 
                     <table class=MsoTable15Plain1 border=1 cellspacing=0 cellpadding=0 width=593
@@ -242,12 +243,12 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
                             <td width=64 valign=top style='width:47.95pt;border:solid #BFBFBF 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><b>Método</b></p>
+  text-align:center;line-height:normal'><b>MÃ©todo</b></p>
                             </td>
                             <td width=529 valign=top style='width:14.0cm;border:solid #BFBFBF 1.0pt;
   border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
                                 <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
-  text-align:center;line-height:normal'><b>Descripción</b></p>
+  text-align:center;line-height:normal'><b>DescripciÃ³n</b></p>
                             </td>
                         </tr>
                         <tr>
@@ -260,7 +261,7 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
   none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
   background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt'>
                                 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'>Nombre de la tabla (<span style='color:#385623'>‘tasks’</span>)</p>
+  normal'>Nombre de la tabla (<span style='color:#385623'>â€˜tasksâ€™</span>)</p>
                             </td>
                         </tr>
                         <tr>
@@ -273,8 +274,8 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
   none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
   padding:0cm 5.4pt 0cm 5.4pt'>
                                 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'>Campos que queremos obtener (<span style='color:#385623'>‘campo1,
-  campo2, campo3,….’</span>)</p>
+  normal'>Campos que queremos obtener (<span style='color:#385623'>â€˜campo1,
+  campo2, campo3,â€¦.â€™</span>)</p>
                             </td>
                         </tr>
                         <tr>
@@ -287,7 +288,7 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
   none;border-bottom:solid #BFBFBF 1.0pt;border-right:solid #BFBFBF 1.0pt;
   background:#F2F2F2;padding:0cm 5.4pt 0cm 5.4pt'>
                                 <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-  normal'>Criterio (<span style='color:#385623'>‘campo’,’operador’,’valor’</span>)</p>
+  normal'>Criterio (<span style='color:#385623'>â€˜campoâ€™,â€™operadorâ€™,â€™valorâ€™</span>)</p>
                             </td>
                         </tr>
                         <tr>
@@ -316,12 +317,12 @@ color:#DEE3EC'>&nbsp;</span></p>
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#DEE3EC'>array (size=6)<br>
- <a name="_Hlk527122976">     </a>'id' =&gt; string '17' (length=2)<br>
-      'title' =&gt; string 'New task' (length=8)<br>
-      'description' =&gt; string 'yes!' (length=4)<br>
-      'created_at' =&gt; string '2018-10-10 22:54:30' (length=19)<br>
-      'updated_at' =&gt; string '2018-10-12 15:05:25' (length=19)<br>
-      'success' =&gt; string '0' (length=1)</span></p>
+Â <a name="_Hlk527122976">Â Â Â Â  </a>'id' =&gt; string '17' (length=2)<br>
+Â Â Â Â Â  'title' =&gt; string 'New task' (length=8)<br>
+Â Â Â Â Â  'description' =&gt; string 'yes!' (length=4)<br>
+Â Â Â Â Â  'created_at' =&gt; string '2018-10-10 22:54:30' (length=19)<br>
+Â Â Â Â Â  'updated_at' =&gt; string '2018-10-12 15:05:25' (length=19)<br>
+Â Â Â Â  Â 'success' =&gt; string '0' (length=1)</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
@@ -336,8 +337,8 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
                 <div class="body">
                     <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>GetAll()</span></b></p>
 
-                    <p class=MsoNormal>Así como realizamos consultas de registros individuales,
-                        podemos hacer consultas de un conglomerado de registros con el método <span
+                    <p class=MsoNormal>AsÃ­ como realizamos consultas de registros individuales,
+                        podemos hacer consultas de un conglomerado de registros con el mÃ©todo <span
                                 style='background:silver'>getAll().</span> En este caso obtendremos todas las
                         tareas que su valor <b>success</b> sea igual a <b>0</b> y ordenaremos estos
                         registros por <b>created_at</b> de manera descendente;</p>
@@ -348,12 +349,12 @@ color:#1080FF'>&nbsp;</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#1080FF'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#1080FF'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#1080FF'>public function </span><span lang=EN-US
                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>showAllTasks</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()<br>
- {<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â {<br>
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#DEE3EC'>$req </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>= </span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$this</span><span
@@ -364,13 +365,13 @@ color:#DEE3EC'>$req </span><span lang=EN-US style='font-size:9.0pt;font-family:
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'tasks'</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>)<br>
-        -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â Â Â Â Â  -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#FF4427'>select</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#73C800'>'id, title, description,
 created_at,updated_at,success'</span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>)<br>
-        -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â Â Â Â Â  -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#FF4427'>where</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#73C800'>'success'</span><span
@@ -379,7 +380,7 @@ color:#FF4427'>where</span><span lang=EN-US style='font-size:9.0pt;font-family:
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>0</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>)<br>
-        -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â Â Â Â Â  -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#FF4427'>orderBy</span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US
                                                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'created_at'</span><span
@@ -387,14 +388,14 @@ font-family:"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'desc'</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>)<br>
-        -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â Â Â Â Â  -&gt;</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#FF4427'>getAll</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>();<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#1080FF'>return </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#DEE3EC'>$req</span><span lang=EN-US
                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>;<br>
- }</span></p>
+Â }</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
@@ -404,25 +405,25 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 
                     <table class="table striped secondary bordered">
                         <thead>
-                        <th>Método</th>
-                        <th>Descripción</th>
+                        <th>MÃ©todo</th>
+                        <th>DescripciÃ³n</th>
                         </thead>
                         <tbody>
                         <tr>
                             <td>table()</td>
-                            <td>Nombre de la tabla (‘tasks’)</td>
+                            <td>Nombre de la tabla (â€˜tasksâ€™)</td>
                         </tr>
                         <tr>
                             <td>select()</td>
-                            <td>Campos que queremos obtener (‘campo1, campo2, campo3,….’)</td>
+                            <td>Campos que queremos obtener (â€˜campo1, campo2, campo3,â€¦.â€™)</td>
                         </tr>
                         <tr>
                             <td>where()</td>
-                            <td>Criterio (‘campo’,’operador’,’valor’)</td>
+                            <td>Criterio (â€˜campoâ€™,â€™operadorâ€™,â€™valorâ€™)</td>
                         </tr>
                         <tr>
                             <td>orderBy()</td>
-                            <td>Ordena los datos (‘campo’,’orden’)</td>
+                            <td>Ordena los datos (â€˜campoâ€™,â€™ordenâ€™)</td>
                         </tr>
                         <tr>
                             <td>getAll();</td>
@@ -440,23 +441,23 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#DEE3EC'> array (size=2)<br>
- 0 =&gt;<br>
-    array (size=6)<br>
-            'id' =&gt; string '17' (length=2)<br>
-            'title' =&gt; string 'New task' (length=8)<br>
-            'description' =&gt; string 'yes!' (length=4)<br>
-            'created_at' =&gt; string '2018-10-10 22:54:30' (length=19)<br>
-            'updated_at' =&gt; string '2018-10-12 15:05:25' (length=19)<br>
-            'success' =&gt; string '0' (length=1)<br>
- 1 =&gt;<br>
-    array (size=6)<br>
-            'id' =&gt; string '15' (length=2)<br>
-            'title' =&gt; string 'new config' (length=13)<br>
-            'description' =&gt; string 'a new config, yeah!' (length=22)<br>
-            'created_at' =&gt; string '2018-10-10 20:32:37' (length=19)<br>
-            'updated_at' =&gt; string '2018-10-10 20:32:37' (length=19)<br>
-            'success' =&gt; string '0' (length=1)</span></p>
+"Source Code Pro";color:#DEE3EC'>Â array (size=2)<br>
+Â 0 =&gt;<br>
+Â Â Â  array (size=6)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'id' =&gt; string '17' (length=2)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'title' =&gt; string 'New task' (length=8)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'description' =&gt; string 'yes!' (length=4)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'created_at' =&gt; string '2018-10-10 22:54:30' (length=19)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'updated_at' =&gt; string '2018-10-12 15:05:25' (length=19)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'success' =&gt; string '0' (length=1)<br>
+Â 1 =&gt;<br>
+Â Â Â  array (size=6)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'id' =&gt; string '15' (length=2)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'title' =&gt; string 'new config' (length=13)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'description' =&gt; string 'a new config, yeah!' (length=22)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'created_at' =&gt; string '2018-10-10 20:32:37' (length=19)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'updated_at' =&gt; string '2018-10-10 20:32:37' (length=19)<br>
+Â Â Â Â Â Â Â Â Â Â Â  'success' =&gt; string '0' (length=1)</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
@@ -473,8 +474,8 @@ datos</span></b></p>
 
                     <p class=MsoNormal>A diferencia de los ejemplos anteriores, no debe utilizar <span
                             style='background:silver'>get()</span> ni <span style='background:silver'>getAll()</span>
-                        para crear consultas de inserción. En lugar de esto creamos un arreglo
-                        asociativo el cual puede ser como el ejemplo a continuación;</p>
+                        para crear consultas de inserciÃ³n. En lugar de esto creamos un arreglo
+                        asociativo el cual puede ser como el ejemplo a continuaciÃ³n;</p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
@@ -482,20 +483,20 @@ color:#DEE3EC'>&nbsp;</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#DEE3EC'>$data </span><span lang=EN-US
                                                     style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= [<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'title' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$title</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'description' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$description</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'created_at' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><i><span lang=EN-US
                                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>date</span></i><span
@@ -503,7 +504,7 @@ font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><i><span lang=EN-US
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Y-m-d
 H:i:s'</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#0F81FF'>) <br>
- ];</span></p>
+Â ];</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
@@ -511,7 +512,7 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 
                     <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-                    <p class=MsoNormal>Este arreglo es pasado al método <span style='background:
+                    <p class=MsoNormal>Este arreglo es pasado al mÃ©todo <span style='background:
 silver'>insert()</span> de la siguiente manera;</p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -520,20 +521,20 @@ color:#DEE3EC'>&nbsp;</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#DEE3EC'>$data </span><span lang=EN-US
                                                     style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= [<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'title' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$title</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'description' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$description</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'created_at' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><i><span lang=EN-US
                                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>date</span></i><span
@@ -541,13 +542,13 @@ font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><i><span lang=EN-US
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Y-m-d
 H:i:s'</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#0F81FF'>) <br>
- ];</span></p>
+Â ];</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'><br>
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#FF4427'>getBdd</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()-&gt;</span><span
@@ -566,8 +567,8 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 
                     <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-                    <p class=MsoNormal>Puedes obtener el <b>id </b>insertado con una simple línea
-                        luego de realizada la inserción de datos;</p>
+                    <p class=MsoNormal>Puedes obtener el <b>id </b>insertado con una simple lÃ­nea
+                        luego de realizada la inserciÃ³n de datos;</p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><i><span style='font-size:9.0pt;font-family:"Source Code Pro";
@@ -575,20 +576,20 @@ color:#DEE3EC'>&nbsp;</span></i></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#DEE3EC'>$data </span><span lang=EN-US
                                                     style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= [<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'title' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$title</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'description' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$description</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'created_at' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><i><span lang=EN-US
                                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>date</span></i><span
@@ -596,13 +597,13 @@ font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><i><span lang=EN-US
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Y-m-d
 H:i:s'</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#0F81FF'>) <br>
- ];</span></p>
+Â ];</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'><br>
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#FF4427'>getBdd</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()-&gt;</span><span
@@ -621,12 +622,12 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#6E7A94'> </span><span style='font-size:9.0pt;
+"Source Code Pro";color:#6E7A94'>Â </span><span style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#6E7A94'>//Obteniendo el id insertado</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> $insert_id<i> = </i></span><span style='font-size:9.0pt;
+color:#DEE3EC'>Â $insert_id<i> = </i></span><span style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#DEE3EC'>$this</span><span
                             style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span
                             style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>getBdd</span><span
@@ -647,13 +648,13 @@ color:#DEE3EC'>&nbsp;</span></p>
                     <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Actualizando
 registros</span></b></p>
 
-                    <p class=MsoNormal>Como vimos en el ejemplo se inserción de datos en el caso de
-                        actualizar tampoco usaremos los métodos <span style='background:silver'>get()</span>
+                    <p class=MsoNormal>Como vimos en el ejemplo se inserciÃ³n de datos en el caso de
+                        actualizar tampoco usaremos los mÃ©todos <span style='background:silver'>get()</span>
                         y <span style='background:silver'>getAll()</span> en lugar de esto usaremos <span
                                 style='background:silver'>update()</span>;</p>
 
                     <p class=MsoNormal>Crearemos un arreglo asociativo como en el ejemplo anterior,
-                        esta vez solo con los datos que se actualizarán, no es necesario enviar todos
+                        esta vez solo con los datos que se actualizarÃ¡n, no es necesario enviar todos
                         los campos;</p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -662,20 +663,20 @@ color:#DEE3EC'>&nbsp;</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#DEE3EC'>$data </span><span lang=EN-US
                                                     style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= [<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'title' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$title</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'description' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#252CF7'>$description</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
-    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+Â Â Â  </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#73C800'>'updated_at' </span><span lang=EN-US style='font-size:9.0pt;
 font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><i><span lang=EN-US
                                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>date</span></i><span
@@ -683,13 +684,13 @@ font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><i><span lang=EN-US
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Y-m-d
 H:i:s'</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
 color:#0F81FF'>)<br>
- ];</span></p>
+Â ];</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'><br>
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#FF4427'>getBdd</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()-&gt;</span><span
@@ -718,8 +719,8 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
                     <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
                     <p class=MsoNormal>En este caso como actualizaremos un registro por su <b>id</b>
-                        debemos usar el método <span style='background:silver'>where()</span> seguido
-                        del método <span style='background:silver'>update()</span>, a este ultimo le
+                        debemos usar el mÃ©todo <span style='background:silver'>where()</span> seguido
+                        del mÃ©todo <span style='background:silver'>update()</span>, a este ultimo le
                         pasamos nuestro arreglo.</p>
 
                     <p class=MsoNormal>&nbsp;</p>
@@ -731,8 +732,8 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
                     <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Eliminar
 registros</span></b></p>
 
-                    <p class=MsoNormal>Es mas sencillo eliminar registros ya que en esta ocasión no
-                        necesitamos crear ningún arreglo, esto es tan sencillo como especificar con el
+                    <p class=MsoNormal>Es mas sencillo eliminar registros ya que en esta ocasiÃ³n no
+                        necesitamos crear ningÃºn arreglo, esto es tan sencillo como especificar con el
                         metodo <span style='background:silver'>where()</span> los criterios;</p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
@@ -741,7 +742,7 @@ color:#1080FF'>&nbsp;</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#DEE3EC'>$this</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>getBdd</span><span
@@ -774,10 +775,10 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
             <div id="metodo_query" class="panel bordered">
                 <div class="body">
                     <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%;
-color:black'>Consultas método Query</span></b></p>
+color:black'>Consultas mÃ©todo Query</span></b></p>
 
-                    <p class=MsoNormal><span style='color:black'>También puedes realizar consultas
-SQL utilizando el método </span><span style='color:black;background:silver'>query()</span></p>
+                    <p class=MsoNormal><span style='color:black'>TambiÃ©n puedes realizar consultas
+SQL utilizando el mÃ©todo </span><span style='color:black;background:silver'>query()</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
@@ -785,10 +786,10 @@ color:#6E7A94'>&nbsp;</span></p>
 
                     <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
 normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#6E7A94'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#6E7A94'>Â </span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#6E7A94'>//Select todos por criterio<br>
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#FF4427'>getBdd</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()-&gt;</span><span
@@ -808,9 +809,9 @@ color:#73C800'>10</span><span lang=EN-US style='font-size:9.0pt;font-family:
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>();<br>
 <br>
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#6E7A94'> //Selecionar 1 registro<br>
+color:#6E7A94'>Â //Selecionar 1 registro<br>
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#FF4427'>getBdd</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()-&gt;</span><span
@@ -830,9 +831,9 @@ color:#73C800'>10</span><span lang=EN-US style='font-size:9.0pt;font-family:
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>();<br>
 <br>
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#6E7A94'> //Puedes usar consultas como update, insert, select, etc...<br>
+color:#6E7A94'>Â //Puedes usar consultas como update, insert, select, etc...<br>
 </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
+color:#DEE3EC'>Â $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
 "Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
 9.0pt;font-family:"Source Code Pro";color:#FF4427'>getBdd</span><span
                             lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()-&gt;</span><span
@@ -853,15 +854,15 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
                     <p class=MsoNormal><span lang=EN-US style='color:black'>&nbsp;</span></p>
 
                     <p class=MsoNormal>Se recomienda utilizar el Query Builder en todos los casos
-                        ya que tienes una sintaxis más organizada y legible, inclusive escalable.</p>
+                        ya que tienes una sintaxis mÃ¡s organizada y legible, inclusive escalable.</p>
                 </div>
             </div>
 
             <div id="resumen" class="panel bordered">
                 <div class="body">
                     <h3>Resumen</h3>
-                    <p class=MsoNormal>En general es mas sencillo que las consultas anteriores. En esta sección solo veremos consultas simples como las
-                        anteriores, para ampliar más puede visitar la documentación del Query Builder <a href="query_builder.htm" class="primary important undecoration">Query Builder</a>
+                    <p class=MsoNormal>En general es mas sencillo que las consultas anteriores. En esta secciÃ³n solo veremos consultas simples como las
+                        anteriores, para ampliar mÃ¡s puede visitar la documentaciÃ³n del Query Builder <a href="query_builder.htm" class="primary important undecoration">Query Builder</a>
                     </p>
                 </div>
             </div>
