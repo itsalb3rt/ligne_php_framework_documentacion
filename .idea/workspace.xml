@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="508adfcb-675d-459f-8565-2cfc6c75eee5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/includes/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/includes/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indice.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Introduccion.htm" beforeDir="false" afterPath="$PROJECT_DIR$/Introduccion.htm" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,14 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="menu.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/menu.html">
+      <file leaf-file-name="Introduccion.htm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Introduccion.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#ul#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="55" column="64" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -83,13 +80,13 @@
         <option value="$PROJECT_DIR$/query_builder.htm" />
         <option value="$PROJECT_DIR$/time_difference.htm" />
         <option value="$PROJECT_DIR$/includes/pie_pagina.html" />
-        <option value="$PROJECT_DIR$/Introduccion.htm" />
         <option value="$PROJECT_DIR$/convenciones.htm" />
         <option value="$PROJECT_DIR$/modelo.htm" />
         <option value="$PROJECT_DIR$/css/ligne.min.css" />
         <option value="$PROJECT_DIR$/Vista.htm" />
         <option value="$PROJECT_DIR$/controladores.htm" />
         <option value="$PROJECT_DIR$/includes/menu.html" />
+        <option value="$PROJECT_DIR$/Introduccion.htm" />
       </list>
     </option>
   </component>
@@ -168,12 +165,12 @@
       <workItem from="1540503552661" duration="7293000" />
       <workItem from="1540555729284" duration="93000" />
       <workItem from="1540904866293" duration="4270000" />
-      <workItem from="1540910849568" duration="22000" />
+      <workItem from="1540910849568" duration="716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39253000" />
+    <option name="totallyTimeSpent" value="39947000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -418,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Introduccion.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/convenciones.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -474,6 +464,13 @@
           <folding>
             <element signature="n#style#0;n#div#1;n#ul#0;n#div#0;n#header#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Introduccion.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="55" column="64" selection-start-line="55" selection-start-column="64" selection-end-line="55" selection-end-column="64" />
         </state>
       </provider>
     </entry>
