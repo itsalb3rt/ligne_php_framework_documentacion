@@ -1,0 +1,36 @@
+<header>
+    <div id="navbar" class="sticky">
+
+        <ul id="breadcrumb">
+            <div class="left gradient" style="margin-right: 5rem;margin-left: 2rem;color: white; font-weight: bold;font-variant: small-caps;font-size: 20px;">
+                Ligne PHP
+            </div>
+            <li><a href="Introduccion.htm"><span> </span> Inicio</a></li>
+            <li><a href="indice.html"><span>Indice de contenido</span></a></li>
+            <li><a href="creditos.html"><span> </span>Créditos y licencia</a></li>
+            <div class="right" style="margin-left: 10rem;">
+                <form action="#">
+                    <div class="input-group">
+                        <input type="search" style="width: 10rem;height: 26px;line-height: 2px" placeholder="Buscar">
+                        <button type="submit" style="border:0;background-color: transparent">&#128269;</button>
+                    </div>
+                </form>
+            </div>
+        </ul>
+    </div>
+</header>
+<script>
+
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>

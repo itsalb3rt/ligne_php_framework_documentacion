@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    <title>Configuracion</title>
+    <link rel="stylesheet" href="css/ligne.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/includes.js"></script>
+    <style>
+        <!--
+        /* Font Definitions */
+        * {
+            font-family: Verdana, sans-serif;
+        }
+
+        /* Style Definitions */
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            margin-top: 0cm;
+            margin-right: 0cm;
+            margin-bottom: 8.0pt;
+            margin-left: 0cm;
+            line-height: 107%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif;
+        }
+
+        pre {
+            mso-style-link: "HTML con formato previo Car";
+            margin: 0cm;
+            margin-bottom: .0001pt;
+            font-size: 10.0pt;
+            font-family: "Courier New";
+        }
+
+
+        -->
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--incluyendo el menu-->
+    <div w3-include-html="includes/menu.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <!--incluyendo el menu-->
+    <div class="panel bordered">
+        <div class="body">
+            <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Configuración
+básica</span></b></p>
+
+            <p class=MsoNormal>Ligne requiere una configuración mínima para su funcionamiento,
+                usted solo debe indicarle en que base de datos, con que usuario y contraseña e
+                inmediatamente podrá comenzar con el desarrollo de la app, fácil, ¿no?</p>
+
+            <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Configuración
+de la base de datos</span></b></p>
+
+            <p class=MsoNormal>EL archivo <span style='background:silver'>/ config /
+config.php.ini </span> es donde tiene lugar la configuración de su base de
+                datos. Este archivo viene por defecto, con unos datos que usted debe cambiar
+                dependiendo de su necesidad. Cuando el archivo es abierto vera lo siguiente;</p>
+
+            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><b><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:blue'>&nbsp;</span></b></p>
+
+            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><b><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:blue'> &lt;?php return; ?&gt;</span></b></p>
+
+            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:blue'><br>
+</span></b><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#F2F2F2'> host</span></b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>localhost<br>
+</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#F2F2F2'> user</span></b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>root<br>
+</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#F2F2F2'> pass</span></b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>&quot;1234&quot;<br>
+</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#F2F2F2'> dbname</span></b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>taskapp<br>
+</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#F2F2F2'> driver</span></b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>mysql<br>
+</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#F2F2F2'> charset</span></b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>utf8<br>
+</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#F2F2F2'> collation</span></b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>utf8_general_ci<br>
+</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#F2F2F2'> prefix</span></b><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>&quot;&quot;</span>
+            </p>
+
+            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
+
+            <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+            <p class=MsoNormal>Reemplace la información provista por defecto con la
+                información de conexión de base de datos para su aplicación.</p>
+
+            <p class=MsoNormal>Ligne soporta los siguientes controladores de base de datos:</p>
+
+            <table class="table striped bordered medium">
+                <thead>
+                <tr>
+                    <th>Nombre del controlador</th>
+                    <th>Bases de datos admitidas</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>MYSQL</td>
+                    <td>MySQL 3.x/4.x/5.x/8.x</td>
+                </tr>
+                <tr>
+                    <td>PGSQL</td>
+                    <td>PostgreSQL</td>
+                </tr>
+                <tr>
+                    <td>SQLITE</td>
+                    <td>SQLite 3 and SQLite 2</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Oracle</td>
+                    <td>Oracle</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!--incluyendo el pie de pagina-->
+    <div w3-include-html="includes/pie_pagina.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <!--incluyendo el pie de pagina-->
+</div>
+</body>
+</html>

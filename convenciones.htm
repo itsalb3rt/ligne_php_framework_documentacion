@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    <link rel="stylesheet" href="css/ligne.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/includes.js"></script>
+    <title>Convenciones</title>
+    <style>
+        /* Font Definitions */
+        * {
+            font-family: Verdana, sans-serif;
+        }
+
+        /*Estilo del codigo php*/
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            margin-top: 0cm;
+            margin-right: 0cm;
+            margin-bottom: 8.0pt;
+            margin-left: 0cm;
+            line-height: 107%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif;
+        }
+
+        pre {
+            mso-style-link: "HTML con formato previo Car";
+            margin: 0cm;
+            margin-bottom: .0001pt;
+            font-size: 10.0pt;
+            font-family: "Courier New";
+        }
+
+        ol li {
+            margin: 8px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+    <!--incluyendo el menu-->
+    <div w3-include-html="includes/menu.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <!--incluyendo el menu-->
+    <div class="panel bordered">
+        <div class="body">
+            <h3>Contenido</h3>
+            <ol>
+                <li><a href="#convenciones_ligne" class="primary important undecoration">Convenciones de Ligne</a></li>
+                <li><a href="#controladores" class="primary important undecoration">Convenciones del controlador</a></li>
+                <li><a href="#urls" class="primary important undecoration">Consideraciones de URL para nombres de controladores</a></li>
+                <li><a href="#clases" class="primary important undecoration">Convenciones de archivos y nombres de clases</a></li>
+                <li><a href="#base_datos" class="primary important undecoration">Convenciones de base de datos</a></li>
+                <li><a href="#resumen" class="primary important undecoration">Resumen</a></li>
+            </ol>
+        </div>
+        <div class="body">
+            <div id="convenciones_ligne" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Convenciones
+de Ligne</span></b></p>
+
+                    <p class=MsoNormal>Si bien toma un poco de tiempo aprender las convenciones de Ligne,
+                        a la larga se ahorra tiempo. Al seguir las convenciones, obtiene funcionalidad
+                        gratuita y se libera de la pesadilla de mantenimiento de los archivos de
+                        configuración. Las convenciones también hacen que la experiencia de desarrollo
+                        sea muy uniforme, permitiendo a otros desarrolladores participar y ayudar.</p>
+                </div>
+            </div>
+            <div id="controladores" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Convenciones
+del controlador</span></b></p>
+
+                    <p class=MsoNormal>Los nombres de clase del controlador son plural y en UpperCamelCase
+                        y terminan en Controller. <span style='background:silver'>TasksController</span>
+                        <span style='background:silver'>UsersController</span> ambos son ejemplos de
+                        nombres de controladores convencionales.</p>
+
+                    <p class=MsoNormal>Los métodos públicos en los Controladores a menudo se
+                        exponen como 'acciones' accesibles a través de un navegador web. Por ejemplo, <a
+                                href="http://example.com/app/tasks/create/"><span style='color:black'><span
+                                style='color:black'>http://example.com/app/tasks/create/</span></span></a>
+                        donde <b>tasks </b>es el controlador y <b>create </b>es la acción. </p>
+                </div>
+            </div>
+            <div id="urls" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Consideraciones
+de URL para nombres de controladores</span></b></p>
+
+                    <p class=MsoNormal>Como acaba de ver, los controladores de una sola palabra se
+                        asignan a una ruta URL simple en minúsculas. Por ejemplo, se accede desde <span
+                                style='background:silver'>UsersController</span> (que se definiría en el nombre
+                        de archivo <span style='background:silver'>UsersController.php</span> ) </p>
+
+                    <p class=MsoNormal><a href="http://example.com/users"><span style='color:black'><span
+                            style='color:black'>http://example.com/users</span></span></a></p>
+                    <div style="margin: auto;text-align: center;">
+                        <img src="img/url_example.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="clases" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Convenciones
+de archivos y nombres de clases</span></b></p>
+
+                    <p class=MsoNormal>En general, los nombres de archivo coinciden con los nombres
+                        de clase y siguen el estándar PSR-4 para la carga automática. Los siguientes
+                        son algunos ejemplos de nombres de clase y sus nombres de archivo:</p>
+
+                    <p class=MsoNormal>&nbsp;</p>
+
+                    <ul style='margin-top:0cm' type=disc>
+                        <li class=MsoNormal>La clase del controlador <span style='background:silver'>TasksController</span>
+                            encontraría en un archivo llamado <b>TasksController.php</b></li>
+                        <li class=MsoNormal>Las vistas deben estar en un sub directorio de <b>Views </b>con
+                            el nombre de la clase y con extensión .php. Las vistas de la clase <b>Tasks</b>
+                            están en <span style='background:silver'>/Views/Tasks/</span><b> </b>y un
+                            ejemplo de un nombre de vista valido seria <span style='background:silver'>/Views/Tasks/create.php</span>
+                            el nombre de esta hace referencia a la acción.
+                        </li>
+                        <li class=MsoNormal>
+                            Debe haber solo 1 clase por archivo, no se permiten 2 clases por archivo, esto causara errores de carga de clases.
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-left:18.0pt'>&nbsp;</p>
+                </div>
+            </div>
+            <div id="base_datos" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Convenciones
+de base de datos</span></b></p>
+
+                    <p class=MsoNormal>Los nombres de las tablas correspondientes a los modelos de
+                        Ligne son plurales y están subrayados. Por ejemplo, <b>Tasks</b>, <b>create_at</b>
+                        y <b>update_at_date</b> respectivamente.</p>
+
+                    <p class=MsoNormal>Los nombres de campo / columna con dos o más palabras están
+                        subrayadas: <b>first_second</b>.</p>
+
+                    <p class=MsoNormal>Además de usar un entero de incremento automático como
+                        claves primarias.</p>
+                </div>
+            </div>
+            <div id="resumen" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Resumen</span></b></p>
+
+                    <p class=MsoNormal>Al usar estas convenciones, Ligne sabe que una solicitud
+                        para;</p>
+
+                    <p class=MsoNormal>http://example.com/tasks/index </p>
+
+                    <p class=MsoNormal>Está realizando una llamada al método <span
+                            style='background:silver'>index()</span> de <b>TasksController</b>, donde el
+                        modelo de Tasks está disponible automáticamente (y automáticamente vinculada a
+                        la tabla de &quot;Tasks&quot; en la base de datos), y se procesa en un archivo.
+                        Ninguna de estas relaciones se ha configurado por ningún otro medio que no sea
+                        la creación de clases y archivos que necesitaría crear de todos modos.</p>
+                    <p>
+                        Los archivos que contienen clases deben llamarse tal cual se llama la clase que contiene.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--incluyendo el pie de pagina-->
+    <div w3-include-html="includes/pie_pagina.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <!--incluyendo el pie de pagina-->
+</div>
+</body>
+</html>

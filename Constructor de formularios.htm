@@ -1,0 +1,1015 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    <link rel="stylesheet" href="css/ligne.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/includes.js"></script>
+    <title>FormBuilder</title>
+    <style>
+        /* Font Definitions */
+        * {
+            font-family: Verdana, sans-serif;
+        }
+
+        /*Estilo del codigo php*/
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            margin-top: 0cm;
+            margin-right: 0cm;
+            margin-bottom: 8.0pt;
+            margin-left: 0cm;
+            line-height: 107%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif;
+        }
+
+        pre {
+            mso-style-link: "HTML con formato previo Car";
+            margin: 0cm;
+            margin-bottom: .0001pt;
+            font-size: 10.0pt;
+            font-family: "Courier New";
+        }
+
+        ol li {
+            margin: 8px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <!--incluyendo el menu-->
+    <div w3-include-html="includes/menu.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <!--incluyendo el menu-->
+    <div class="panel bordered">
+        <div class="body">
+            <h3>Contenido</h3>
+            <ol>
+                <li><a href="#constructor_formulario" class="important primary undecoration">Constructor de formularios</a></li>
+                <li><a href="#uso_basico" class="important primary undecoration">Usos Básicos</a></li>
+                <li><a href="#creando_formulario" class="important primary undecoration">Crear el primer formulario</a></li>
+                <li><a href="#atributos_formularios" class="important primary undecoration">Atributos formularios</a></li>
+                <li><a href="#agregando_inputs" class="important primary undecoration">Agregando inputs</a></li>
+                <li><a href="#obtener_formulario" class="important primary undecoration">Obtener el formulario</a></li>
+            </ol>
+        </div>
+        <div class="body">
+
+            <div id="constructor_formulario" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Constructor
+de formularios</span></b></p>
+
+                    <p class=MsoNormal>Ligne viene con una pequeña clase llamada <b>PhpFormBuilder</b>
+                        que facilita la creación y salida de formularios como HTML o XHTML. Los
+                        formularios son tediosos y pueden ser difíciles de construir. Además, hay
+                        tantas opciones diferentes posibles que es fácil olvidar lo que puedes hacer
+                        con ellas.</p>
+
+                    <p class=MsoNormal>Esta clase proporciona ventajas como;</p>
+
+                    <ul style='margin-top:0cm' type=disc>
+                        <li class=MsoNormal>Poder reutilizar los formularios y mantener sus vistas
+                            limpias
+                        </li>
+                        <li class=MsoNormal>Obtiene formularios con unas pocas líneas</li>
+                        <li class=MsoNormal>Dispone de las validaciones habituales de HTML5</li>
+                        <li class=MsoNormal>Es difícil dispararse en el pie</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="uso_basico" class="panel bordered">
+                <div class="body">
+
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Usos
+Básicos</span></b></p>
+
+                    <p class=MsoNormal>Veamos un sencillo ejemplo de un formulario de inicio de
+                        sesión bastante básico y posteriormente explicaremos a fondo la funcionalidad
+                        de este poderoso constructor de formularios;</p>
+
+                    <p class=MsoNormal>Lo primero que debemos hacer es utilizar la clase <b>PhpFormBuilder
+                    </b>en la cabecera de nuestra clase</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#1080FF'>use </span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>FormBuilder</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>\</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>PhpFormBuilder</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>;<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'> class </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#FF4427'>LoginController </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>extends
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>Controller<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'> {</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#6E7A94'>  </span><span style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#6E7A94'>//...</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'> }</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal>&nbsp;</p>
+
+                    <p class=MsoNormal>Una vez tenemos la clase incluida en nuestra cabecera
+                        comenzamos;</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> <span lang=EN-US>$login_form </span></span><span lang=EN-US
+                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>new
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>PhpFormBuilder</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>();<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //Atributos del formulario<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>set_att</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'action'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'/loginCheck'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>);<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>set_att</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'method'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'post'</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>);<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>set_att</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'enctype'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'multipart / form-data'</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#0F81FF'>);<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //Agregando campo user name<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>add_input</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'User'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>array</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#73C800'>'placeholder' </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>=&gt;
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'User name'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>,<br>
+          </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'required' </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
+                                                                style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'true'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>),<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'user_name'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>);<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //Agregando campo password<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>add_input</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Password'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>array</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#73C800'>'type' </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>=&gt;
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'password'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>,<br>
+          </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'placeholder' </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
+                                                                style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'*****'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
+          </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'required' </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
+                                                                style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'true'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,),<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'password'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>);<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //Agregando checkbox para recordar credenciales<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>add_input</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Remember
+me'</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>, </span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#1080FF'>array</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US
+                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'type' </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>=&gt;
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'checkbox'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>), </span><span lang=EN-US
+                                                             style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Remember_me'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>);<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //Agregando el boton submit<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>add_input</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Login'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>array</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#73C800'>'type' </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>=&gt;
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'submit'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>,<br>
+          </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'value' </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=&gt; </span><span lang=EN-US
+                                                                style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'Login'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>),<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'login'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>);<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //Enviardo datos a la vista<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $data</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>[</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#73C800'>'form_login'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>]
+= </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>$login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>build_form</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>();<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#FF4427'>setData</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$data</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>);</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#6E7A94'>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $this</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#FF4427'>render</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'login'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>);</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+                    <p class=MsoNormal>Ahora nuestra vista poseerá un formulario como este;</p>
+
+                    <p class=MsoNormal><img width=334 height=194 id="Imagen 1"
+                                            src="Constructor%20de%20formularios_archivos/image001.jpg"></p>
+
+                    <p class=MsoNormal>Este es un formulario sumamente sencillo de crear y elaborar
+                        gracias a constructor de formularios. Ahora veamos paso por paso cada función
+                        de lo que acabamos de ver:</p>
+                </div>
+            </div>
+
+            <div id="creando_formulario" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>1)
+instanciar la clase</span></b></p>
+
+                    <p class=MsoNormal>Esto es bastante simple:</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $login_form </span><span style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>= </span><span style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#1080FF'>new </span><span style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>PhpFormBuilder</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>();</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal>&nbsp;</p>
+
+                    <p class=MsoNormal>Esto utiliza todas las configuraciones predeterminadas para
+                        el formulario, que son las siguientes:</p>
+
+                    <pre style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>action: empty, submit to current URL</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>method: post</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>enctype: application/x-www-form-urlencoded</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>class: none</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>id: none</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>markup: html</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>novalidate: false</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US
+                            style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>add_nonce: false</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>add_honeypot: true</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>form_element: true</span></pre>
+                    <pre
+                            style='margin-left:36.0pt;text-indent:-18.0pt;background:#F6F8FA'><span
+                            lang=EN-US style='font-family:Symbol;color:#24292E'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+                            lang=EN-US
+                            style='font-size:11.0pt;font-family:"Calibri",sans-serif;color:#24292E'>add_submit: true</span></pre>
+                    <pre
+                            style='margin-left:18.0pt;background:#F6F8FA'><span lang=EN-US
+                                                                                style='font-family:Consolas;color:#24292E'>&nbsp;</span></pre>
+
+                    <p class=MsoNormal>&nbsp;</p>
+
+                    <p class=MsoNormal>Las explicaciones para cada uno de los ajustes serán
+                        explicadas en las siguientes páginas.</p>
+
+                    <p class=MsoNormal>&nbsp;</p>
+
+                    <p class=MsoNormal>También puede crear una instancia pasando una URL, que se
+                        convierte en la acción del formulario:</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> <span lang=EN-US>$login_form </span></span><span lang=EN-US
+                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>new
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>PhpFormBuilder</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'http://example.com/loginCheck'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>);</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+                </div>
+            </div>
+
+            <div id="atributos_formularios" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>2) Cambie
+cualquier atributo del formulario, si lo desea</span></b></p>
+
+                    <pre style='background:#F6F8FA'><span class=pl-c><span style='font-family:Consolas;
+color:#6A737D'>&nbsp;</span></span></pre>
+                    <pre style='background:#F6F8FA'><span
+                            class=pl-c><span lang=EN-US
+                                             style='font-family:Consolas;color:#6A737D'>// Agregar un nuevo formulario action</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                                style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>action</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US
+                                             style='font-family:Consolas;color:#032F62'>http://submit-here.com</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+                    <pre style='background:#F6F8FA'><span
+                            class=pl-c><span
+                            style='font-family:Consolas;color:#6A737D'>// Cambiar el método de envío </span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span class=pl-smi><span style='font-family:Consolas;
+color:#24292E'>$new_form</span></span><span class=pl-k><span style='font-family:
+Consolas;color:#D73A49'>-&gt;</span></span><span class=pl-s1><span
+                            style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span style='font-family:Consolas;color:#032F62'>method</span></span><span
+                            class=pl-pds><span style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-pds><span style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span style='font-family:Consolas;color:#032F62'>get</span></span><span
+                            class=pl-pds><span style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span style='font-family:Consolas;color:#24292E'>&nbsp;</span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span class=pl-c><span style='font-family:Consolas;
+color:#6A737D'>// Cambiar el enctype </span></span></pre>
+                    <pre style='background:
+#F6F8FA'><span class=pl-smi><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>$new_form</span></span><span class=pl-k><span lang=EN-US
+                                                             style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>enctype</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US
+                                             style='font-family:Consolas;color:#032F62'>multipart/form-data</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+                    <pre style='background:#F6F8FA'><span
+                            class=pl-c><span
+                            style='font-family:Consolas;color:#6A737D'>// Se puede establecer en 'html' o 'xhtml' </span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                                style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>markup</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>xhtml</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+                    <pre style='background:#F6F8FA'><span
+                            class=pl-c><span style='font-family:Consolas;color:#6A737D'>// Las clases se agregan como una matriz</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                                style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>class</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-c1><span lang=EN-US style='font-family:Consolas;color:#005CC5'>array</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>(</span></span><span
+                            class=pl-pds><span lang=EN-US
+                                               style='font-family:Consolas;color:#032F62'>'class1', 'class2'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>));</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#F6F8FA'><span lang=EN-US style='font-size:10.0pt;font-family:
+Consolas;color:#6A737D'>// Agregar un id al formulario </span></p>
+
+                    <pre style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                             style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>id</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>xhtml</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#F6F8FA'><span style='font-size:10.0pt;font-family:Consolas;
+color:#6A737D'>// Agrega el atributo HTML5 &quot;novalidate&quot; </span></p>
+
+                    <pre style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                             style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>novalidate</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-c1><span lang=EN-US style='font-family:Consolas;color:#005CC5'>true</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#F6F8FA'><span style='font-size:10.0pt;font-family:Consolas;
+color:#6A737D'>// Agrega un campo de WordPress nonce usando la cadena que se
+pasa </span></p>
+
+                    <pre style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                             style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>add_nonce</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US
+                                             style='font-family:Consolas;color:#032F62'>build_a_nonce_using_this</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#F6F8FA'><span style='font-size:10.0pt;font-family:Consolas;
+color:#6A737D'>// Agrega un campo de texto oculto en blanco para el control de
+spam </span></p>
+
+                    <pre style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                             style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>add_honeypot</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-c1><span lang=EN-US style='font-family:Consolas;color:#005CC5'>true</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#F6F8FA'><span style='font-size:10.0pt;font-family:Consolas;
+color:#6A737D'>// Envuelve las entradas con un elemento de formulario </span></p>
+
+                    <pre style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                             style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>form_element</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-c1><span lang=EN-US style='font-family:Consolas;color:#005CC5'>true</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#F6F8FA'><span style='font-size:10.0pt;font-family:Consolas;
+color:#6A737D'>// Si no se agrega ningún tipo de envío, agregue uno
+automáticamente </span></p>
+
+                    <pre style='background:#F6F8FA'><span class=pl-smi><span lang=EN-US
+                                                                             style='font-family:Consolas;color:#24292E'>$new_form</span></span><span
+                            class=pl-k><span lang=EN-US style='font-family:Consolas;color:#D73A49'>-&gt;</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>set_att(</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s><span lang=EN-US style='font-family:Consolas;color:#032F62'>form_element</span></span><span
+                            class=pl-pds><span lang=EN-US style='font-family:Consolas;color:#032F62'>'</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>, </span></span><span
+                            class=pl-c1><span lang=EN-US style='font-family:Consolas;color:#005CC5'>true</span></span><span
+                            class=pl-s1><span lang=EN-US style='font-family:Consolas;color:#24292E'>);</span></span></pre>
+                    <pre
+                            style='background:#F6F8FA'><span lang=EN-US style='font-family:Consolas;
+color:#24292E'>&nbsp;</span></pre>
+
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+                    <p class=MsoNormal>Actualmente, existen algunas restricciones de los atributos
+                        (de los que vimos) que se pueden agregar, ni tampoco se comprueba si las clases
+                        o los identificadores son válidos, así que tenlo en cuenta/consideración.</p>
+
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>&nbsp;</span></b></p>
+                </div>
+            </div>
+
+            <div id="agregando_inputs" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>3) Añade
+inputs a tu formulario</span></b></p>
+
+                    <p class=MsoNormal>Los inputs o entradas se pueden agregar una a la vez o como
+                        un grupo. De cualquier manera, el orden en que se agregan es el orden en el que
+                        aparecerán.</p>
+
+                    <p class=MsoNormal>El método para esto es <span style='background:silver'>add_input()</span>
+                        este método recibe 3 parámetros;</p>
+
+                    <ul style='margin-top:0cm' type=disc>
+                        <li class=MsoNormal><b>Argumento 1 Label:</b> Una etiqueta legible para el ser
+                            humano, que se analiza y se convierte en el nombre y la identificación <b><i>cuando
+                                esta opción</i></b> no está establecida explícitamente. Si usa una
+                            etiqueta simple como &quot;correo electrónico&quot; aquí, asegúrese de
+                            establecer un nombre más específico en el argumento 3.
+                        </li>
+                        <li class=MsoNormal><b>Argumento 2 Opciones:</b> Una matriz de configuraciones
+                            que se combinan con las configuraciones predeterminadas para controlar la
+                            visualización y el tipo de campo. Se exploran las opciones mas adelante.
+                        </li>
+                        <li class=MsoNormal><b>Argumento 3 Slug</b>: una cadena, válida para un
+                            atributo HTML, esta se utilizará para el atributo <b>name </b>e <b>id</b>.
+                            Esto le permite establecer nombres de envío específicos difieren de la etiqueta
+                            del campo.
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal>Agregue campos usando su etiqueta (en forma legible por
+                        humanos), una variedad de configuraciones y un nombre / id slug, si es
+                        necesario.</p>
+
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Opciones</span></b></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>name</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es el argumento 3, si está configurado, o el texto de
+                            la etiqueta formateada
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Esto se convierte en el atributo &quot;name&quot; en el
+                            campo
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>id</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es el argumento 3, si está configurado, o el texto de
+                            la etiqueta formateada
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Esto se convierte en el atributo &quot;id&quot; en el
+                            campo y el atributo &quot;for&quot; en la etiqueta
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>label</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es el argumento 1, se puede establecer explícitamente
+                            utilizando este argumento
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>value</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es vacío
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Si se encuentra un índice $ _REQUEST con el mismo
+                            nombre, el valor se reemplaza con ese valor encontrado
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>placeholder</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es vacío
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Atributo HTML5 para mostrar texto de ejemplo dentro de
+                            los inputs.
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>class</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es una matriz vacía
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Agregue varias clases usando una matriz de nombres de
+                            clase válidos
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>options</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es una matriz vacía
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>La matriz de opciones se utiliza para campos de tipo
+                            &quot;select&quot;, &quot;checkbox&quot; y &quot;radio&quot;.&nbsp;Para
+                            otras entradas, este argumento se ignora.
+                        </li>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>La
+                            matriz debe ser una matriz asociativa con el valor como la clave y el
+                            nombre de la etiqueta como el valor como&nbsp;<span style='background:
+     silver'>array('value' =&gt; 'Name to show')</span></li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>El nombre de la etiqueta para el campo se usa como
+                            encabezado para las múltiples opciones (establezca &quot;add_label&quot;
+                            en &quot;false&quot; para suprimir)
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>min</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es vacío
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Utilizado para los tipos &quot;range&quot; y
+                            &quot;número&quot;
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>max</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es vacío
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Utilizado para los tipos &quot;range&quot; y
+                            &quot;número&quot;
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>step</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es vacío
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Utilizado para los tipos &quot;range&quot; y
+                            &quot;número&quot;
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>autofocus</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es &quot;falso&quot;
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Un valor &quot;true&quot; simplemente agrega el atributo
+                            HTML5 &quot;autofocus&quot;
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>checked</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es &quot;falso&quot;
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Un valor &quot;true&quot; simplemente agrega el atributo
+                            &quot;checked&quot;
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>required</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es &quot;falso&quot;
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Un valor &quot;true&quot; simplemente agrega el atributo
+                            &quot;required&quot; de HTML5
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>add_label</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es &quot;true&quot;
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Un valor &quot;falso&quot; suprimirá la etiqueta para
+                            este campo
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>wrap_tag</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es &quot;div&quot;
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Un nombre de etiqueta HTML válido para la envoltura de
+                            inputs.
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Establezca esto en una cadena vacía para no usar una <span
+                                style='color:black'>envoltura </span>para el campo
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>wrap_class</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es una matriz con &quot;form_field_wrap&quot; como único
+                            valor
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Las clases deben agregarse como una matriz de nombres de
+                            clase HTML válidos
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Las envolturas de los inputs tendrán esta clase
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>wrap_id</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es vacío
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Agrega una identificación a este campo pasando una
+                            cadena
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:white'><b><span style='color:black'>wrap_style</span></b></p>
+
+                    <ul type=disc>
+                        <li class=MsoNormal style='color:black;line-height:normal;background:white'>El
+                            valor predeterminado es vacío
+                        </li>
+                        <li class=MsoNormal style='color:black;margin-top:3.0pt;line-height:normal;
+     background:white'>Esta cadena de texto se agregará dentro de un atributo
+                            de estilo
+                        </li>
+                    </ul>
+
+                    <p class=MsoNormal style='margin-top:3.0pt;line-height:normal;background:white'><span
+                            style='color:black'>&nbsp;</span></p>
+                </div>
+            </div>
+
+            <div id="obtener_formulario" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal style='margin-top:3.0pt;line-height:normal;background:white'><b><span
+                            style='font-size:16.0pt;color:black'>4) Obtener el formulario</span></b></p>
+
+                    <p class=MsoNormal style='margin-top:3.0pt;line-height:normal;background:white'><span
+                            style='color:black'>Una declaración rápida produce el formulario como HTML:</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> <span lang=EN-US>$data</span></span><span lang=EN-US
+                                                          style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>[</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'form_login'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>]
+= </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>$login_form</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>build_form</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>();</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-top:3.0pt;line-height:normal;background:white'><span
+                            lang=EN-US style='color:black'>&nbsp;</span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--incluyendo el pie de pagina-->
+    <div w3-include-html="includes/pie_pagina.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <!--incluyendo el pie de pagina-->
+</div>
+
+</body>
+
+</html>

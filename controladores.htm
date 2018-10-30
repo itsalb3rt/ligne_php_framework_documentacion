@@ -1,0 +1,594 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+    <meta name=Generator content="Microsoft Word 15 (filtered)">
+    <link rel="stylesheet" href="css/ligne.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="js/includes.js"></script>
+    <style>
+        /* Font Definitions */
+        * {
+            font-family: Verdana, sans-serif;
+        }
+
+        /*Estilo del codigo php*/
+        p.MsoNormal, li.MsoNormal, div.MsoNormal {
+            margin-top: 0cm;
+            margin-right: 0cm;
+            margin-bottom: 8.0pt;
+            margin-left: 0cm;
+            line-height: 107%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif;
+        }
+        pre {
+            mso-style-link: "HTML con formato previo Car";
+            margin: 0cm;
+            margin-bottom: .0001pt;
+            font-size: 10.0pt;
+            font-family: "Courier New";
+        }
+        ol li{
+            margin: 8px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <!--incluyendo el menu-->
+    <div w3-include-html="includes/menu.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <!--incluyendo el menu-->
+
+    <div class="panel bordered">
+        <div class="panel">
+            <div class="body">
+                <h3>Contenido</h3>
+                <ol>
+                    <li><a href="#controladores" class="primary undecoration important">Controladores</a></li>
+                    <li><a href="#acciones_controlador" class="primary undecoration important">Acciones del controlador</a></li>
+                    <li><a href="#interactuando_vistas" class="primary undecoration important">Interactuando con Vistas</a></li>
+                    <li><a href="#interactuar_modelos" class="primary undecoration important">Interactuar con los modelos</a></li>
+                    <li><a href="#control_flujo" class="primary undecoration important">Control de flujo</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="body">
+            <div id="controladores" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Controladores</span></b></p>
+
+                    <p class=MsoNormal><span lang=ES>Los controladores son el intermediario entre
+la vista<i> (Lo que ve el usuario)</i> y el modelo <i>(Interacción con la base
+de datos).</i></span></p>
+
+                    <p class=MsoNormal><span lang=ES>Los controladores proporcionan una serie de
+métodos que manejan las solicitudes. Estas son llamadas de acciones. cada
+método público en un controlador es una acción, y es accesible desde una URL. </span></p>
+
+                    <p class=MsoNormal><span lang=ES>Una acción es responsable de interpretar la
+solicitud y crear la respuesta. Por lo general, las respuestas tienen la forma
+de una vista renderizada, pero también hay otras formas de crear respuestas.</span></p>
+
+                    <p class=MsoNormal><span lang=ES>Cada controlador creado debe heredar de la
+clase <b>Controller</b>, el <b>Controller </b>es la clase principal para todos
+los controladores de la aplicación. Esta clase está incluida en la biblioteca
+principal de Ligne.</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#1080FF'>class </span><span lang=EN-US
+                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>tasksController
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>extends </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#DEE3EC'>Controller</span><span lang=EN-US
+                                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'> {<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //Code…</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'><br>
+ }</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+                </div>
+            </div>
+
+            <div id="acciones_controlador" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Acciones
+del controlador</span></b></p>
+
+                    <p class=MsoNormal>Las acciones del controlador son responsables de convertir
+                        los parámetros de solicitud en una respuesta para el usuario que realiza la
+                        solicitud. </p>
+
+                    <p class=MsoNormal>Por convención, Ligne presenta una vista con una versión
+                        modulada del nombre de la acción. Crearemos un controlador de tareas como
+                        ejemplo, en el crearemos las acciones <span style='background:silver'>allTack()</span>,
+                        <span style='background:silver'>create()</span> y <span style='background:silver'>edit()</span>;</p>
+
+                    <p class=MsoNormal><b><u><span style='font-size:16.0pt;line-height:107%'><span
+                            style='text-decoration:none'>&nbsp;</span></span></u></b></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'> <span lang=EN-US>class </span></span><span lang=EN-US
+                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>tasksController
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>extends </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#DEE3EC'>Controller </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#6E7A94'>//Herencia</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'><br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'> {<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>public function </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#73C800'>allTask</span><span lang=EN-US
+                                                                 style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()<br>
+    {<br>
+        </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'>//Código<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>}</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>    </span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#1080FF'>public function </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>create</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()<br>
+    {<br>
+        </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'>//Código<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>}</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>    </span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#1080FF'>public function </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>edit</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>($id)<br>
+    {<br>
+        </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'>//Código<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>}<br>
+<br>
+ }</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+                    <p class=MsoNormal>Los archivos de vista de estas acciones serían <span
+                            style='background:silver'>/View/Tasks/alltask.php</span>, <span
+                            style='background:silver'>/View/Tasks/create.php</span> y <span
+                            style='background:silver'>/View/Tasks/edit.php</span> El nombre del archivo de
+                        vista convencional es la versión en minúscula de la acción.</p>
+                </div>
+            </div>
+
+            <div id="interactuando_vistas" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Interactuando
+con Vistas</span></b></p>
+
+                    <p class=MsoNormal>Los controladores interactúan con las vistas de varias
+                        maneras. Primero, pueden pasar datos a las vistas, usando <span
+                                style='background:silver'>setData()</span>. También puede decidir qué archivo
+                        de vista usar desde el controlador.</p>
+
+                    <p class=MsoNormal>El método <span style='background:silver'>setData() </span>es
+                        la forma principal de enviar datos desde su controlador a su vista. Una vez que
+                        haya usado <span style='background:silver'>setData()</span>, se puede acceder a
+                        la variable en su vista:</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $data</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>[</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'date'</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>] = </span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>&quot;Oct 2018&quot;</span><span style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //envía datos a la vista desde el controlador</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'><br>
+</span><span style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'> $this</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>setData</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$data</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>); </span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><u><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><u><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'> //Accediendo a los datos en la vista</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> La fecha es: &lt;</span><span style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#26A6A6'>strong</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>&gt;&lt;?=
+$date ?&gt;&lt;/</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#26A6A6'>strong</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&gt;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal>&nbsp;</p>
+
+                    <p class=MsoNormal>El método <span style='background:silver'>setData()</span> también
+                        toma una matriz asociativa como su primer parámetro. A menudo, esto puede ser
+                        una forma rápida de asignar un conjunto de información a la vista.</p>
+
+                    <p class=MsoNormal>El método <span style='background:silver'>render()</span> se
+                        llama al final de cada acción del controlador. Este método realiza toda la
+                        lógica de la vista (utilizando los datos que ha enviado utilizando el método <span
+                                style='background:silver'>setData()</span>), coloca la vista dentro del mismo $
+                        layout.</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'> <span lang=EN-US>public function </span></span><span lang=EN-US
+                                                              style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>edit</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()<br>
+ {<br>
+<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>$data</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>[</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#73C800'>'tasks'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>]
+= </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>$tasks</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>-&gt;</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#FF4427'>showAllTasks</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>();</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#6E7A94'>    </span><span style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#6E7A94'>//envia datos a la vista<br>
+</span><span style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>   
+</span><span style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$this</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>setData</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$data</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>);</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#6E7A94'>    //Renderiza la vista</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>    $this</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>-&gt;</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#FF4427'>render</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>(</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>&quot;index&quot;</span><span style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>); </span><span style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#6E7A94'><br>
+</span><span style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'> }</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal><br>
+                        El método <span style='background:silver'>render()</span> admite un segundo
+                        parámetro el cual es utilizado para establecer el título de la página;</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> $this</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>-&gt;</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#FF4427'>render</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>(</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>&quot;index&quot;</span><span style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>,</span><span style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#73C800'>'Index Page'</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>); </span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#6E7A94'>//Renderiza
+la vista con un titulo</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal> <br>
+                        Este habitualmente se coloca en la etiqueta &lt;title&gt; de html en el layout</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> &lt;</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#26A6A6'>title</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&gt;&lt;?= $page_title ?&gt;&lt;/</span><span style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#26A6A6'>title</span><span
+                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>&gt;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+                </div>
+            </div>
+
+            <div id="interactuar_modelos" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Interactuar
+con los modelos</span></b><br><br>
+                        Por convicción los modelos se añaden a los controladores en la cabecera de las clases controladoras utilizando la palabra reservada <span style='background:silver'>use</span>;</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'> <span lang=EN-US>use </span></span><span lang=EN-US
+                                                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'></span><i><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>
+</span></i><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'> </span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'>Models\Tasks\Task</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>;<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'> class </span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#FF4427'>TasksController </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>extends
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>Controller<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'> {</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#6E7A94'>         </span><span style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#6E7A94'>//code...</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'> }</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal>&nbsp;</p>
+
+                    <p class=MsoNormal>Inmediatamente haga uso del modelo, podrá realizar instancias de la clase, si no se realiza esto y se instancia una clase no incluida en la cabecera, resultara en un error fatal que detendrá la ejecución de su programa.
+                        Note que el <span style='background:silver'>use</span> es el <span style='background:silver'>namespace</span> de su clase.
+                        Los modelos se utilizarán siempre que sea necesaria la extracción de datos de la base de datos.
+                    </p>
+
+                    <p class=MsoNormal>Los modelos se utilizarán siempre que sea necesaria la
+                        extracción de datos de la base de datos.</p>
+                </div>
+            </div>
+
+            <div id="control_flujo" class="panel bordered">
+                <div class="body">
+                    <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Control
+de flujo</span></b></p>
+
+                    <p class=MsoNormal>El método de control de flujo que usarás más a menudo es <span
+                            style='background:silver'>redirect()</span>. Este método toma su primer
+                        parámetro en forma de una URL relativa a Ligne. Cuando un usuario ha realizado
+                        un pedido con éxito, es posible que desee redirigirlos a una pantalla de éxito.</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'> <span lang=EN-US>public function </span></span><span lang=EN-US
+                                                              style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>create</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>()<br>
+ {<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>$task</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>= </span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#1080FF'>new </span><span lang=EN-US
+                                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>Task</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>();<br>
+<br>
+    </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>if </span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$task </span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#FF4427'>create</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>( </span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$_POST</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>[</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>&quot;title&quot;</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>],
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>$_POST</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>[</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#73C800'>&quot;description&quot;</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>])
+)<br>
+    {<br>
+        </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>$this </span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>-&gt; </span><span lang=EN-US
+                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>redirect</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>array</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'controller'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'>=&gt;</span><span lang=EN-US
+                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'tasks'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'action'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>=&gt;</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'index'
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>) );<br>
+    }<br>
+ }</span></p>
+
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+                    <p class=MsoNormal>También puede usar una URL relativa o absoluta como el argumento
+                        $redirecTo:</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> <span lang=EN-US>$this</span></span><span lang=EN-US
+                                                          style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>redirect</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>
+( </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'/ tasks / index'</span><span lang=EN-US style='font-size:9.0pt;
+font-family:"Source Code Pro";color:#0F81FF'> ); </span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'> $this</span><span lang=EN-US
+                                                    style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>redirect</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>
+( </span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#73C800'>'http://www.github.com'</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#0F81FF'> );</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+                    <p class=MsoNormal>También puede pasar datos a la acción:</p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#DEE3EC'> <span lang=EN-US>$this</span></span><span lang=EN-US
+                                                          style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>redirect</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#1080FF'>array</span><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US style='font-size:
+9.0pt;font-family:"Source Code Pro";color:#73C800'>'controller'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>=&gt;</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'tasks'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'action'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>=&gt;</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'edit'</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>),</span><span
+                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>$id
+</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
+color:#0F81FF'>);</span></p>
+
+                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
+"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
+
+                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+                    <p class=MsoNormal>El Segundo parámetro que <span style='background:silver'>redirect()</span>
+                        admite es un parámetro para la url enviada.</p>
+
+                    <p class=MsoNormal>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--incluyendo el pie de pagina-->
+    <div w3-include-html="includes/pie_pagina.html"></div>
+    <script>
+        includeHTML();
+    </script>
+    <!--incluyendo el pie de pagina-->
+</div>
+</body>
+</html>
