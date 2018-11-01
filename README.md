@@ -1,5 +1,5 @@
 # Bienvenido
-Ligne es un *"mini Framework"* **MVC** que ejecuta PHP 7.x.x (y 5.6). Prácticamente ya todo está preparado, solo necesita realizar algunas configuraciones mínimas y puedes comenzar a trabajar, las distintas partes de Ligne funcionan bien juntas o por separado.
+Ligne es un *"Framework"* **MVC** que ejecuta PHP 7.x.x (y 5.6). Prácticamente ya todo está preparado, solo necesita realizar algunas configuraciones mínimas y puedes comenzar a trabajar, las distintas partes de Ligne funcionan bien juntas o por separado.
 
 El objetivo de esta descripción general es presentar los conceptos generales en Ligne y ofrecerle una descripción general rápida de cómo se implementan esos conceptos.
 
