@@ -7,7 +7,10 @@
     <title>Configuracion</title>
     <link rel="stylesheet" href="css/ligne.min.css?v1.2">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/code_style.css">
     <script src="js/includes.js"></script>
+    <script src="js/rainbow-custom.min.js"></script>
+    <script src="js/php.js"></script>
     <style>
         <!--
         /* Font Definitions */
@@ -61,57 +64,19 @@ de la base de datos</span></b></p>
 config.php.ini </span> es donde tiene lugar la configuración de su base de
                 datos. Este archivo viene por defecto, con unos datos que usted debe cambiar
                 dependiendo de su necesidad. Cuando el archivo es abierto vera lo siguiente;</p>
-
-            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><b><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:blue'>&nbsp;</span></b></p>
-
-            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><b><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:blue'> &lt;?php return; ?&gt;</span></b></p>
-
-            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:blue'><br>
-</span></b><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#F2F2F2'> host</span></b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>localhost<br>
-</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#F2F2F2'> user</span></b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>root<br>
-</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#F2F2F2'> pass</span></b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>&quot;1234&quot;<br>
-</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#F2F2F2'> dbname</span></b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>taskapp<br>
-</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#F2F2F2'> driver</span></b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>mysql<br>
-</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#F2F2F2'> charset</span></b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>utf8<br>
-</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#F2F2F2'> collation</span></b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>utf8_general_ci<br>
-</span><b><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#F2F2F2'> prefix</span></b><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>=</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>&quot;&quot;</span>
-            </p>
-
-            <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
-
-            <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<pre>
+    <code data-language="php">
+<?php return; ?>
+host=localhost
+user=root
+pass="1234"
+dbname=taskapp
+driver=mysql
+charset=utf8
+collation=utf8_general_ci
+prefix=""
+    </code>
+</pre>
 
             <p class=MsoNormal>Reemplace la información provista por defecto con la
                 información de conexión de base de datos para su aplicación.</p>
@@ -137,10 +102,6 @@ normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
                 <tr>
                     <td>SQLITE</td>
                     <td>SQLite 3 and SQLite 2</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>Oracle</td>

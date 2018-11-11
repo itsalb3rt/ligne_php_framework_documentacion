@@ -96,6 +96,7 @@ header{
 
 
 #navbar {
+  z-index: 99;
   overflow: hidden;
   background-color: #333;
   width: 100%;

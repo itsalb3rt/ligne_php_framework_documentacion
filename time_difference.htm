@@ -6,7 +6,10 @@
     <meta name=Generator content="Microsoft Word 15 (filtered)">
     <link rel="stylesheet" href="css/ligne.min.css?v1.2">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/code_style.css">
     <script src="js/includes.js"></script>
+    <script src="js/rainbow-custom.min.js"></script>
+    <script src="js/php.js"></script>
     <title>Modelo</title>
     <title>Time Differencia</title>
     <style>
@@ -53,126 +56,33 @@ de tiempo entre fechas</span></b></p>
 
                     <p class=MsoNormal>Como parte del utilitario de Ligne existe la clase llamada <b>TimeDiff</b>
                         para realizar cálculos de diferencia de tiempo entre fechas;</p>
+<pre>
+    <code data-language="php">
+ //Hacemos uso de la clase
+ use TimeDifference\TimeDiff;
 
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>&nbsp;</span></p>
+ //Creamos una instancia de la clase
+ $new_time = new TimeDiff('2018-10-12','2018-10-15');
 
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#6E7A94'> //Hacemos uso de la clase<br>
-</span><span style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'> use
-</span><span style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>TimeDifference</span><span
-                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>\</span><span
-                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#DEE3EC'>TimeDiff</span><span
-                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>;</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>&nbsp;</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>&nbsp;</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#6E7A94'> //Creamos una instancia de la clase</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> <span lang=EN-US>$new_time </span></span><span lang=EN-US
-                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= </span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>new
-</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>TimeDiff</span><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'2018-10-12'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'2018-10-15'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>);</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#6E7A94'> </span><span style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#6E7A94'>//Obtenemos su resultados y lo
-mostramos por pantalla</span><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#0F81FF'><br>
-</span><i><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> var_dump</span></i><span style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#0F81FF'>(</span><span style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#DEE3EC'>$new_time</span><span
-                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>-&gt;</span><span
-                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#FF4427'>timeDiff</span><span
-                            style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>());</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>&nbsp;</span></p>
-
-                    <p class=MsoNormal>&nbsp;</p>
+ //Obtenemos su resultados y lo mostramos por pantalla
+ var_dump($new_time->timeDiff());
+    </code>
+</pre>
 
                     <p class=MsoNormal>Esto retorna un arreglo asociativo como el siguiente;</p>
-
-                    <pre style='background:#F2F2F2'><b><span style='font-size:11.0pt;font-family:
-Consolas;color:#212529'> <span lang=EN-US>array</span></span></b><span
-                            lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> <i>(size=5)</i></span></pre><pre
-                        style='background:#F2F2F2'><span lang=EN-US style='font-size:11.0pt;font-family:
-Consolas;color:#212529'>  'total_days' </span><span lang=EN-US
-                                                    style='font-size:11.0pt;font-family:Consolas;color:#888A85'>=&gt;</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span></pre><pre
-                        style='background:#F2F2F2'><span lang=EN-US style='font-size:11.0pt;font-family:
-Consolas;color:#212529'>    <b>array</b> <i>(size=2)</i></span></pre><pre
-                        style='background:#F2F2F2'><span lang=EN-US style='font-size:11.0pt;font-family:
-Consolas;color:#212529'>      0 </span><span lang=EN-US style='font-size:11.0pt;
-font-family:Consolas;color:#888A85'>=&gt;</span><span lang=EN-US
-                                                      style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:8.5pt;font-family:Consolas;color:#212529'>string</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#CC0000'>'12'</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> <i>(length=2)</i></span></pre><pre
-                        style='background:#F2F2F2'><span lang=EN-US style='font-size:11.0pt;font-family:
-Consolas;color:#212529'>      1 </span><span lang=EN-US style='font-size:11.0pt;
-font-family:Consolas;color:#888A85'>=&gt;</span><span lang=EN-US
-                                                      style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:8.5pt;font-family:Consolas;color:#212529'>string</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#CC0000'>'15'</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> <i>(length=2)</i></span></pre><pre
-                        style='background:#F2F2F2'><span lang=EN-US style='font-size:11.0pt;font-family:
-Consolas;color:#212529'>  'first_day_time' </span><span lang=EN-US
-                                                        style='font-size:11.0pt;font-family:Consolas;color:#888A85'>=&gt;</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:8.5pt;font-family:Consolas;color:#212529'>int</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#4E9A06'>61200</span></pre><pre
-                        style='background:#F2F2F2'><span lang=EN-US style='font-size:11.0pt;font-family:
-Consolas;color:#212529'>  'last_day_time' </span><span lang=EN-US
-                                                       style='font-size:11.0pt;font-family:Consolas;color:#888A85'>=&gt;</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:8.5pt;font-family:Consolas;color:#212529'>int</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#4E9A06'>61200</span></pre><pre
-                        style='background:#F2F2F2'><span lang=EN-US style='font-size:11.0pt;font-family:
-Consolas;color:#212529'>  'timeDiff' </span><span lang=EN-US style='font-size:
-11.0pt;font-family:Consolas;color:#888A85'>=&gt;</span><span lang=EN-US
-                                                             style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:8.5pt;font-family:Consolas;color:#212529'>int</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#4E9A06'>122400</span></pre><pre
-                        style='background:#F2F2F2'><span lang=EN-US style='font-size:11.0pt;font-family:
-Consolas;color:#212529'>  'total_time' </span><span lang=EN-US
-                                                    style='font-size:11.0pt;font-family:Consolas;color:#888A85'>=&gt;</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:8.5pt;font-family:Consolas;color:#212529'>int</span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#212529'> </span><span
-                        lang=EN-US style='font-size:11.0pt;font-family:Consolas;color:#4E9A06'>0</span></pre>
-
-                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<pre>
+    <code data-language="php">
+ array (size=5)
+  'total_days' =>
+    array (size=2)
+      0 => string '12' (length=2)
+      1 => string '15' (length=2)
+  'first_day_time' => int 61200
+  'last_day_time' => int 61200
+  'timeDiff' => int 122400
+  'total_time' => int 0
+    </code>
+</pre>
 
                     <p class=MsoNormal ><span lang=EN-US></span><code class="code">total_days</code> Es el total de los días que pasaron entre las 2 fechas.</p>
 
@@ -215,122 +125,26 @@ Consolas;color:#212529'>  'total_time' </span><span lang=EN-US
                         obtener tiempo hábil, por ejemplo, en una jornada laboral de 8:00:00 a 17:00:00
                         las horas hábiles son 8, se dio el rango de 2018-10-15 a 2018-10-18 el
                         resultado es;</p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>&nbsp;</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> <span lang=EN-US>$new_time </span></span><span lang=EN-US
-                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= </span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>new
-</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>TimeDiff</span><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'2018-10-15'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'2018-10-18'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'08:00:00'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'17:00:00'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>8</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>);</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
-
-                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
-                    <div>
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><b><span lang=EN-US style='font-family:Consolas;
-color:#212529'> array</span></b><span lang=EN-US style='font-family:Consolas;
-color:#212529'> <i>(size=5)</i></span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>  'total_days' </span><span lang=EN-US style='font-family:Consolas;
-color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>    <b>array</b> <i>(size=4)</i></span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>      0 </span><span lang=EN-US style='font-family:Consolas;
-color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-size:8.5pt;font-family:
-Consolas;color:#212529'>string</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-family:Consolas;color:#CC0000'>'15'</span><span
-                                lang=EN-US style='font-family:Consolas;color:#212529'> <i>(length=2)</i></span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>      1 </span><span lang=EN-US style='font-family:Consolas;
-color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-size:8.5pt;font-family:
-Consolas;color:#212529'>string</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-family:Consolas;color:#CC0000'>'16'</span><span
-                                lang=EN-US style='font-family:Consolas;color:#212529'> <i>(length=2)</i></span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>      2 </span><span lang=EN-US style='font-family:Consolas;
-color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-size:8.5pt;font-family:
-Consolas;color:#212529'>string</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-family:Consolas;color:#CC0000'>'17'</span><span
-                                lang=EN-US style='font-family:Consolas;color:#212529'> <i>(length=2)</i></span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>      3 </span><span lang=EN-US style='font-family:Consolas;
-color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-size:8.5pt;font-family:
-Consolas;color:#212529'>string</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-family:Consolas;color:#CC0000'>'18'</span><span
-                                lang=EN-US style='font-family:Consolas;color:#212529'> <i>(length=2)</i></span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>  'first_day_time' </span><span lang=EN-US style='font-family:
-Consolas;color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-size:8.5pt;font-family:
-Consolas;color:#212529'>int</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-family:Consolas;color:#4E9A06'>61200</span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>  'last_day_time' </span><span lang=EN-US style='font-family:
-Consolas;color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-size:8.5pt;font-family:
-Consolas;color:#212529'>int</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-family:Consolas;color:#4E9A06'>61200</span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>  'timeDiff' </span><span lang=EN-US style='font-family:Consolas;
-color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-size:8.5pt;font-family:
-Consolas;color:#212529'>int</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-family:Consolas;color:#4E9A06'>180000</span></p>
-
-                        <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#F2F2F2'><span lang=EN-US style='font-family:Consolas;
-color:#212529'>  'total_time' </span><span lang=EN-US style='font-family:Consolas;
-color:#888A85'>=&gt;</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-size:8.5pt;font-family:
-Consolas;color:#212529'>int</span><span lang=EN-US style='font-family:Consolas;
-color:#212529'> </span><span lang=EN-US style='font-family:Consolas;color:#4E9A06'>57600</span></p>
-                    </div>
-
-
-                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<pre>
+    <code data-language="php">
+ $new_time = new TimeDiff('2018-10-15','2018-10-18','08:00:00','17:00:00',8);
+    </code>
+</pre>
+                    <pre>
+                        <code data-language="php">
+ array (size=5)
+  'total_days' =>
+    array (size=4)
+      0 => string '15' (length=2)
+      1 => string '16' (length=2)
+      2 => string '17' (length=2)
+      3 => string '18' (length=2)
+  'first_day_time' => int 61200
+  'last_day_time' => int 61200
+  'timeDiff' => int 180000
+  'total_time' => int 57600
+                        </code>
+                    </pre>
 
                     <p class=MsoNormal>Tenemos que han pasado 4 días entre estas fechas y un tiempo
                         total transcurrido entre ellas.</p>
@@ -352,56 +166,17 @@ semana hábiles</span></b></p>
                     <p class=MsoNormal>Por defecto estos están establecidos en 1 y 5
                         respectivamente y significa que el lunes (1) es el primer día hábil y viernes
                         (5) es el último día hábil por lo que restan el 6(sábado) y 7(domingo).</p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>&nbsp;</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'> <span lang=EN-US>$new_time </span></span><span lang=EN-US
-                                                               style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>= </span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#1080FF'>new
-</span><span lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";
-color:#DEE3EC'>TimeDiff</span><span lang=EN-US style='font-size:9.0pt;
-font-family:"Source Code Pro";color:#0F81FF'>(</span><span lang=EN-US
-                                                           style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>'2018-10-15'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#73C800'>                          '2018-10-18'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#73C800'>                          '08:00:00'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#73C800'>                          '17:00:00'</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#73C800'>                          8</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#1080FF'>                          array</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>(</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>1</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>,</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#73C800'>5</span><span
-                            lang=EN-US style='font-size:9.0pt;font-family:"Source Code Pro";color:#0F81FF'>));</span></p>
-
-                    <p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
-normal;background:#15181E'><span lang=EN-US style='font-size:9.0pt;font-family:
-"Source Code Pro";color:#DEE3EC'>&nbsp;</span></p>
-
-                    <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+<pre>
+    <code data-language="php">
+ $new_time = new TimeDiff('2018-10-15',
+                          '2018-10-18',
+                          '08:00:00',
+                          '17:00:00',
+                          8,
+                          array(1,5)
+  );
+    </code>
+</pre>
 
                     <p class=MsoNormal>Por último, También recibe un arreglo como parámetro para
                         los días festivos.</p>
