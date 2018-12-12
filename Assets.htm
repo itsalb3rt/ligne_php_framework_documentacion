@@ -130,7 +130,7 @@
                     </p>
                     <pre>
                         <code data-language="php">
- <a href="<?= Assets::href("tasks/index")?>"> All Task's </a>
+ <a href="<?= Assets::href( 'tasks/index')?>"> All Task's </a>
                         </code>
                     </pre>
                     <p class=MsoNormal>Con esto obtendremos una url valida dentro de nuestro
@@ -141,7 +141,7 @@
                     </p>
 <pre>
     <code data-language="php">
-<a href="<?=Assets::href("tasks/edit",$task["id"]) ?>" > Edit </a>
+<a href="<?= Assets::href( 'tasks/edit',$task['id']) ?>" > Edit </a>
     </code>
 </pre>
                     <p class=MsoNormal>Note en este ejemplo que se ha pasado <b>id </b>a la acción <b>edit
