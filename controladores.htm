@@ -157,15 +157,20 @@ class tasksController extends Controller //Herencia
                         haya usado <span style='background:silver'>setData()</span>, se puede acceder a
                         la variable en su vista:</p>
 
-                    <pre>
-                        <code data-language="php">
+<pre>
+<code data-language="php">
+//Algun controlador
 $data['date'] = "Oct 2018";
 //envía datos a la vista desde el controlador
 $this->setData($data);
-
+</code>
+</pre>
+<pre>
+<code data-language="php">
 //Accediendo a los datos en la vista
-La fecha es: <strong><?= $date ?></strong> </code>
-                    </pre>
+La fecha es: <strong><?= $date ?></strong>
+</code>
+ </pre>
 
                     <p class=MsoNormal>El método <span style='background:silver'>setData()</span> también
                         toma una matriz asociativa como su primer parámetro. A menudo, esto puede ser
@@ -174,8 +179,7 @@ La fecha es: <strong><?= $date ?></strong> </code>
                     <p class=MsoNormal>El método <span style='background:silver'>render()</span> se
                         llama al final de cada acción del controlador. Este método realiza toda la
                         lógica de la vista (utilizando los datos que ha enviado utilizando el método <span
-                                style='background:silver'>setData()</span>), coloca la vista dentro del mismo $
-                        layout.</p>
+                                style='background:silver'>setData()</span>), coloca la vista dentro del mismo layout.</p>
 <pre>
     <code data-language="php">
 public function edit()
@@ -208,6 +212,19 @@ $this->render("index",'Index Page'); //Renderiza la vista con un titulo
 <title><?= $page_title ?></title>
     </code>
 </pre>
+                    <p class=MsoNormal>
+                        Otras acciones que puede ejecutar este método es renderizar archivos de vistas de otros controladores o si tiene su proyecto por separado puedes cargar el head, body y footer por separado.
+                    </p>
+<pre>
+<code data-language="php">
+$this->render('layout/head',null,true);
+$this->render('layout/body',null,true);
+$this->render('layout/footer',null,true);
+    </code>
+</pre>
+                    <p class=MsoNormal>
+                        Note que se ha especificado una ruta dentro del directorio <code>views</code> y el archivo que queremos cargar, pasamos el título de la página como <code>null</code> y un tercer parámetro como <code>true</code>, este último le indica a render que debe cargar un archivo de vista externo.
+                    </p>
                 </div>
             </div>
 
@@ -235,9 +252,6 @@ class TasksController extends Controller
                         Note que el <span style='background:silver'>use</span> es el <span style='background:silver'>namespace</span> de su clase.
                         Los modelos se utilizarán siempre que sea necesaria la extracción de datos de la base de datos.
                     </p>
-
-                    <p class=MsoNormal>Los modelos se utilizarán siempre que sea necesaria la
-                        extracción de datos de la base de datos.</p>
                 </div>
             </div>
 
@@ -256,7 +270,7 @@ public function create()
  {
     $task= new Task();
 
-    if ($task -> create( $_POST["title"], $_POST["description"]) )
+    if ($task -> create( $title, $description) )
     {
         $this -> redirect(array( 'controller'=>'tasks','action'=>'index' ) );
     }
@@ -264,16 +278,8 @@ public function create()
     </code>
 </pre>
 
-                    <p class=MsoNormal>También puede usar una URL relativa o absoluta como el argumento
-                        <span class="code">$redirecTo</span></p>
-<pre>
-    <code data-language="php">
- $this->redirect ( '/ tasks / index' );
- $this->redirect ( 'http://www.github.com' );
-    </code>
-</pre>
 
-                    <p class=MsoNormal>También puede pasar datos a la acción:</p>
+                    <p class=MsoNormal>Puedes pasar parametros a la acción:</p>
 <pre>
     <code data-language="php">
 $this->redirect( array('controller'=>'tasks','action'=>'edit'),$id );
@@ -282,6 +288,17 @@ $this->redirect( array('controller'=>'tasks','action'=>'edit'),$id );
 
                     <p class=MsoNormal>El Segundo parámetro que <span style='background:silver'>redirect()</span>
                         admite es un parámetro para la url enviada.</p>
+
+
+                    <p class=MsoNormal>
+                        También puede usar una URL relativa o absoluta
+                    </p>
+                    <pre>
+    <code data-language="php">
+ $this->redirect ( '/ tasks / index' );
+ $this->redirect ( 'http://www.github.com' );
+    </code>
+</pre>
 
                     <p class=MsoNormal>&nbsp;</p>
                 </div>
