@@ -332,11 +332,14 @@ de flujo</span></b></p>
 public function create()
  {
     $task= new Task();
+    $request = $this->easy_request();
+    $title = $request->request->get('title');
+    $description = $request->request->get('description');
+    
+    $task -> create( $title, $description);
 
-    if ($task -> create( $title, $description) )
-    {
-        $this -> redirect(array( 'controller'=>'tasks','action'=>'index' ) );
-    }
+    //Llevaremos el usuario hacia el index luego de creada la tarea
+    $this -> redirect(array( 'controller'=>'tasks','action'=>'index' ) );
  }
     </code>
 </pre>
