@@ -342,12 +342,15 @@ public function create()
 </pre>
 
 
-                    <p class=MsoNormal>Puedes pasar parametros a la acción:</p>
+                    <p class=MsoNormal>También se puede rediccionar pasando parámetros por la URL, por ejemplo:</p>
 <pre>
     <code data-language="php">
-$this->redirect( array('controller'=>'tasks','action'=>'edit'),$id );
+$this->redirect( array('controller'=>'tasks','action'=>'view'),$id );
     </code>
 </pre>
+<p class="MsoNormal">
+        Esto nos lleva a la siguiente URL <span style='background:silver'> http://localhost/tasks/view/3 </span>
+</p>
 
                     <p class=MsoNormal>El Segundo parámetro que <span style='background:silver'>redirect()</span>
                         admite es un parámetro para la url enviada.</p>
