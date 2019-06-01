@@ -58,6 +58,7 @@
                     <li><a href="#acciones_controlador" class="primary undecoration important">Acciones del controlador</a></li>
                     <li><a href="#interactuando_vistas" class="primary undecoration important">Interactuando con Vistas</a></li>
                     <li><a href="#interactuar_modelos" class="primary undecoration important">Interactuar con los modelos</a></li>
+                    <li><a href="#recibiendo_datos_get_post" class="primary undecoration important">Recibiendo datos por medio de GET y POST</a></li>
                     <li><a href="#control_flujo" class="primary undecoration important">Control de flujo</a></li>
                 </ol>
             </div>
@@ -109,7 +110,7 @@ del controlador</span></b></p>
 
                     <pre>
                         <code data-language="php">
-class tasksController extends Controller //Herencia
+class TasksController extends Controller //Herencia
  {
     public function allTask()
     {
@@ -138,10 +139,9 @@ class tasksController extends Controller //Herencia
                         vista convencional es la versión en minúscula de la acción.</p>
                 </div>
             </div>
-
             <div id="interactuando_vistas" class="panel bordered">
                 <div class="body">
-                    <p class=MsoNormal>
+                    <p class="MsoNormal">
                         <b>
                             <span style='font-size:16.0pt;line-height:107%'>Interactuando con Vistas</span>
                         </b>
@@ -254,7 +254,70 @@ class TasksController extends Controller
                     </p>
                 </div>
             </div>
+            <div id="recibiendo_datos_get_post" class="panel bordered">
+                <div class="body">
+                    <h2>Recibiendo datos por medio de GET y POST</h2>
+                    <p class="MsoNormal">
+                        Las acciones pueden recibir parámetros tanto por <span style='background:silver'>GET</span> como por <span style='background:silver'>POST</span> y gracias al complemento <span style='background:silver'>HttpFoundation</span> podremos realizar una gran cantidad de tareas con un menor esfuerzo;
+                    </p>
+                    <h3>GET</h3>
+                    <p class="MsoNormal">
+                        Tomaremos la acción (metodo) <span style='background:silver'>edit</span> como ejemplo, supongamos que el usuario ingreso a la vista de edición de una tarea con el ID 3, una URL válida para esto sería la siguiente                        <div class="panel">
+                            <div class="body MsoNormal">
+                                <span style='background:silver'>http://localhost/taskapp/ tasks/edit/3</span>
+                            </div>
+                        </div>
+                        <div>
+<pre>
+<code data-language="php">
+    public function edit($id)
+    {
+        $task = new TaskModel();
+        // Alguna logica
+        $data = $task->getTask($id); //$id = 3
+        //envia datos a la vista
+        $this->setData($data);
+    
+        //Renderiza la vista
+        $this->render("edit");
+    }
+</code>
+ </pre>
+                        </div>
+                        
 
+                    </p>
+                    <div>
+                        <h3>POST</h3>
+                        <p class="MsoNormal">
+                            Ahora Supondremos que el usuario realizo las ediciones de la tarea y envió estos datos por medio de <span style='background:silver'>POST</span>, es aquí donde entra en juego el componente <span style='background:silver'>HttpFoundation</span>;
+                        </p>
+                        <p class="MsoNormal">
+                            Supondremos que los datos fueron enviados a una acción (método) nombrado <span style='background:silver'>updateTask</span> el cual procesara la solicitud del usuario.
+                        </p>
+                        <pre>
+<code data-language="php">
+    public function updateTask()
+    {
+        $request = $this->easy_request();
+        //Nos aseguramos que la petición realmente provenga por POST
+        if($request->server->get('REQUEST_METHOD') == 'POST'){
+            $task = new TaskModel();
+            //Obteniendo los datos que provienen del metodo POST
+            $data = [
+                'task_id'=> $request->request->get('task_id'),
+                'description' => $request->request->get('description')
+            ];
+            $task->update($data);
+            //Algo de logica
+        }
+        
+    }
+</code>
+ </pre>
+                    </div>
+                </div>
+            </div>
             <div id="control_flujo" class="panel bordered">
                 <div class="body">
                     <p class=MsoNormal><b><span style='font-size:16.0pt;line-height:107%'>Control
